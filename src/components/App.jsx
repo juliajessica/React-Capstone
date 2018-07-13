@@ -8,6 +8,7 @@ class App extends Component {
       <div className="App">
         <h1>app</h1>
         <Login />
+        <Nav />
 
         <style jsx global>{`
           body {
