@@ -3,7 +3,9 @@ import Nav from './Nav';
 import profileBgImg from './../assets/imgs/profile-bg.svg';
 import profileImg from './../assets/imgs/profileImg.svg';
 import leaf from './../assets/imgs/leaf.svg';
-import settings from './../assets/imgs/settings.svg';
+import wrench from './../assets/imgs/wrench.svg';
+import { Link } from 'react-router-dom';
+
 
 function Profile(){
 
@@ -12,13 +14,13 @@ function Profile(){
       <div className="profile">
         <h3>Profile</h3>
         <div className="profile-layout">
-          <img src={profileImg} className="profile-Img" alt="profile image"/><img src={settings} alt="setting icon"/>
+          <img src={profileImg} className="profile-Img" alt="profile image"/><Link to='/profile-edit'><img src={wrench} alt="wrench icon" className="wrench-icon"/></Link>
           <div className="profile-details">
-            <p><img src={settings} alt="setting icon"/> NAME: Julia Sheremet</p>
-            <p><img src={settings} alt="setting icon"/> NUMBER OF PLANTS: 2</p>
-            <p><img src={settings} alt="setting icon"/> PLANT MOM: <img src={leaf} alt="leaf icon"/> Fern</p>
+            <p>NAME: Julia Sheremet</p>
+            <p>NUMBER OF PLANTS: 2</p>
+            <p>PLANT MOM: <img src={leaf} alt="leaf icon"/> Fern</p>
             <p className='plant2'><img src={leaf} alt="leaf icon" /> Fiddle Leaf Fig</p>
-            <p><img src={settings} alt="setting icon"/> EXPERIENCE: 2 Years</p>
+            <p>EXPERIENCE: 2 Years</p>
           </div>
         </div>
 
@@ -49,10 +51,16 @@ function Profile(){
           padding: 1.5rem;
           color: white;
           font-size: 1.3rem;
-
         }
         .plant2 {
           padding-left: 7.3rem;
+        }
+        .wrench-icon {
+          position: absolute;
+          top: 4.5rem;
+          left: 22.8rem;
+
+
         }
       `}
       </style>
