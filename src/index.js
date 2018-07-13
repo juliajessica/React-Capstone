@@ -2,14 +2,31 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App.jsx';
-import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';import { AppContainer } from 'react-hot-loader';
+import { HashRouter } from 'react-router-dom';
+import { createStore } from 'redux';
+//import postListReducer from './reducers/post-list-reducer';
+//import { Provider } from 'react-redux';
 
-ReactDOM.render(<App />, document.getElementById('react-app-root'));
-registerServiceWorker();
+const render = (Component) => {
+  ReactDOM.render(
+    <AppContainer>
+      <HashRouter>
+        <Component/>
+      </HashRouter>
+    </AppContainer>,
+    document.getElementById('react-app-root')
+  );
+};
 
+render(App);
 
-// import App from './components/App';
-// import { AppContainer } from 'react-hot-loader';
-// import { HashRouter } from 'react-router-dom';
-// import { createStore } from 'redux';
-// import { Provider } from 'react-redux';
+//<Provider store={ store }>
+//</Provider>
+
+/* eslint-disable */
+if (module.hot) {
+  module.hot.accept('./components/App', () => {
+    render(App);
+  });
+}

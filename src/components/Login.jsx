@@ -11,7 +11,7 @@ function Login(){
   return(
     <div style={loginStyles}>
       <h1>NURTURE</h1>
-        <Link to='/plantDescription'><button type="button">SIGN IN</button></Link>
+        <Link to='/plant-search'><button type="button">SIGN IN</button></Link>
         <button type="button">SIGN UP</button>
       <p>Forgot your logins? Click Here!</p>
 
