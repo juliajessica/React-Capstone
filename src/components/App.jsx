@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Login from './Login.jsx';
+import Error404 from './Error404';
+import PlantSearch from './PlantSearch';
 import './App.css';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
@@ -8,7 +10,11 @@ class App extends Component {
     return (
       <div className="App">
         <h1>app</h1>
-        <Login />
+        <Switch>
+          <Route exact path='/' component={Login}/>
+          <Route path='/plant-search' component={PlantSearch}/>
+          <Route component={Error404}/>
+        </Switch>
 
 
         <style jsx global>{`
@@ -28,3 +34,5 @@ class App extends Component {
 }
 
 export default App;
+//<Nav/>
+//<PlantDescription />
