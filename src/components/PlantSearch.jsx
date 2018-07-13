@@ -5,8 +5,16 @@ function PlantSearch(){
 
   return(
     <div>
-      <h1>PlantSearch</h1>
+      <div className="plant-Search">
+        <h1>PlantSearch</h1>
+      </div>
       <Nav/>
+      <style jsx>{`
+        .plant-Search{
+          padding: 0 2rem;
+        }
+      `}
+      </style>
 
 
     </div>

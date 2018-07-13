@@ -9,28 +9,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <style jsx global>
-          {`
+        <style jsx>{`
           body {
             margin: 0;
-            padding: 0 25px;
             font-family: sans-serif;
           }
           h2 {
             color: magenta;
           }
-        `}
-       </style>
-       
-        <h1>app</h1>
+        `}</style>
         <Switch>
           <Route exact path='/' component={Login}/>
           <Route path='/plant-search' component={PlantSearch}/>
           <Route component={Error404}/>
         </Switch>
-
-
-
       </div>
     );
   }
