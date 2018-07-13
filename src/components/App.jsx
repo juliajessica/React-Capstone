@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Login from './Login.jsx';
 import './App.css';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -8,7 +9,7 @@ class App extends Component {
       <div className="App">
         <h1>app</h1>
         <Login />
-        <Nav />
+
 
         <style jsx global>{`
           body {
