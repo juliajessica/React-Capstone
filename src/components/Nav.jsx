@@ -9,24 +9,32 @@ function Nav(){
 
   return(
     <div className="navBar">
-      <img src={Home} alt="home"/>
-      <img src={Calendar} alt="calendar"/>
-      <img src={Spa} alt="garden"/>
-      <img src={User} alt="profile"/>
+      <div className="navImgs">
+        <img src={Home} alt="home"/>
+        <img src={Calendar} alt="calendar"/>
+        <img src={Spa} alt="garden"/>
+        <img src={User} alt="profile"/>
+      </div>
 
     <style jsx>{`
       .navBar{
-        padding: 2rem;
+        padding: 1rem;
         height: 60px;
         width: 100%;
         color:red;
         background-color: #FAD961;
       }
-      .navBar img{
+      .navImgs{
+        padding: 0;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
+        flex-direction: row;
+        justify-content: center;
+        flex-basis: auto;
+        align-content: center;
+        place-content: start space-evenly;
+      }
+      .navImgs img{
+        align-items: center;
       }
 
     `}

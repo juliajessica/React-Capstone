@@ -32,6 +32,7 @@ function Login(){
         .loginStyles h1{
           text-align: center;
           color: white;
+          font-size: 3rem;
         }
         .login-input {
           display:flex;
@@ -47,12 +48,11 @@ function Login(){
           width: 20rem;
           border: 0px solid;
         }
-
         input[type=text] {
           color: white;
           background-color: #E18472;
         }
-        
+
         .login-text {
           text-align: center;
           color: white;
@@ -90,3 +90,8 @@ function Login(){
 }
 
 export default Login;
+
+
+//input[type=text]:focus {
+//   border: 3px solid #DA806F;
+// }
