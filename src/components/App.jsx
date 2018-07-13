@@ -14,15 +14,16 @@ class App extends Component {
           <Route path='/plant-search' component={PlantSearch}/>
           <Route component={Error404}/>
         </Switch>
-        <style jsx>{`
-          .App {
-            margin: auto;
-            padding: 0 3rem;
-          }
-        `}</style>
       </div>
     );
   }
 }
 
 export default App;
+
+//<style jsx>{`
+//   .App {
+//     margin: auto;
+//     padding: 0 3rem;
+//   }
+// `}</style>
