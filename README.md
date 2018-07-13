@@ -23,6 +23,10 @@ https://
 | :------- |
 | ![Sketch Design for Nurture](src/assets/imgs/sketchParallax.png) |
 
+| Component Tree Structure |
+|:----------|
+| ![Component Tree](src/assets/imgs/componentTree.jpeg) |
+
 ## <span style="color:#74875d;">Description</span>
 
 _This webpage application is designed for users to search for plants they're interested in learning about and discover care instructions and details on how to nurture those particular plants._
