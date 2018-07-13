@@ -3,7 +3,6 @@ import React from 'react';
 function Login(){
   let loginStyles = {
     fontWeight: 'bold',
-    fontFamily: 'monospace',
     color: 'black',
     fontSize: '28px'
   }

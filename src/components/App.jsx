@@ -8,6 +8,18 @@ class App extends Component {
       <div className="App">
         <h1>app</h1>
         <Login />
+
+        <style jsx global>{`
+          body {
+            margin: 0;
+            padding: 0 25px;
+            font-family: sans-serif;
+          }
+          h2 {
+            color: magenta;
+          }
+        `}
+       </style>
       </div>
     );
   }
