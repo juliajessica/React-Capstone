@@ -6,7 +6,7 @@ function Profile(){
   return(
     <div>
       <div className="profile">
-        <h1>Profile</h1>
+        <h3>Profile</h3>
       </div>
       <Nav />
       <style jsx>{`

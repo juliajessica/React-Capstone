@@ -6,7 +6,7 @@ function Calendar(){
   return(
     <div>
       <div className="calendar">
-        <h1>Calendar</h1>
+        <h3>Calendar</h3>
       </div>
       <Nav />
       <style jsx>{`

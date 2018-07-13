@@ -6,3 +6,8 @@ body {
   font-family: 'PT Sans Narrow', sans-serif;
   font-weight: lighter;
 }
+
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+}

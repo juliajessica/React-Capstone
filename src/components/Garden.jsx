@@ -6,7 +6,7 @@ function Garden(){
   return(
     <div>
       <div className="garden">
-        <h1>Garden</h1>
+        <h3>Garden</h3>
       </div>
       <Nav />
       <style jsx>{`
@@ -14,6 +14,7 @@ function Garden(){
           padding: 0 2rem;
           height: 562px;
         }
+        
       `}
       </style>
 

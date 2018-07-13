@@ -6,7 +6,7 @@ function PlantSearch(){
   return(
     <div>
       <div className="plant-Search">
-        <h1>PlantSearch</h1>
+        <h3>Plant Search</h3>
         <form>
           <input type="text" placeholder="SEARCH:" className="search-input"></input>
         </form>
