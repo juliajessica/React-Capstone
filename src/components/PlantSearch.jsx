@@ -18,13 +18,12 @@ function PlantSearch(){
           height: 562px;
         }
         .search-input {
-          padding: .7rem;
-          font-size: 1rem;
+          padding: .5rem;
+          font-size: .8rem;
           border-radius: 5px;
           margin: .4rem 0;
           width: 20rem;
           border: 0px solid;
-
         }
 
         input[type=text] {
