@@ -11,13 +11,17 @@
 https://
 
 ## <span style="color:#74875d;">Application Planning</span>
-<a href="/capstone-project-proposal.md">Independent Capstone Project Proposal</a>
-<a href="/capstone-project-proposal.md">Creat React App Original Notes</a>
+* <a href="/capstone-project-proposal.md">Independent Capstone Project Proposal</a>
+* <a href="/capstone-project-proposal.md">Create React App Original Notes</a>
 
 
 | Sketch Application |
 | :------- |
-| ![Sketch Design for Nurture](src/img/sketch2.png) |
+| ![Sketch Design for Nurture](src/assets/imgs/sketch2.png) |
+
+| Parallax |
+| :------- |
+| ![Sketch Design for Nurture](src/assets/imgs/sketchParallax.png) |
 
 ## <span style="color:#74875d;">Description</span>
 
