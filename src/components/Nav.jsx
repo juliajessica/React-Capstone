@@ -3,6 +3,7 @@ import Home from '../assets/imgs/home.svg';
 import Spa from '../assets/imgs/spa.svg';
 import User from '../assets/imgs/user.svg';
 import Calendar from '../assets/imgs/calendar.svg';
+import { Link } from 'react-router-dom';
 
 
 function Nav(){
@@ -10,10 +11,10 @@ function Nav(){
   return(
     <div className="navBar">
       <div className="navImgs">
-        <img src={Home} alt="home"/>
-        <img src={Calendar} alt="calendar"/>
-        <img src={Spa} alt="garden"/>
-        <img src={User} alt="profile"/>
+        <Link to='/plant-search'><img src={Home} alt="home"/></Link>
+        <Link to='/calendar'><img src={Calendar} alt="calendar"/></Link>
+        <Link to='/garden'><img src={Spa} alt="garden"/></Link>
+        <Link to='/profile'><img src={User} alt="profile"/></Link>
       </div>
 
     <style jsx>{`
