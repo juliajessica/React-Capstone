@@ -11,7 +11,10 @@ function CalendarToday(){
       </div>
       <Nav/>
       <style jsx>{`
-
+        .calendar-today {
+          padding: 0 2rem;
+          height: 562px;
+        }
       `}
       </style>
 

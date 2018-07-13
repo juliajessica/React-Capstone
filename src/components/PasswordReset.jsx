@@ -11,7 +11,10 @@ function PasswordReset(){
       </div>
       <Nav/>
       <style jsx>{`
-
+        .password-reset {
+          padding: 0 2rem;
+          height: 562px;
+        }
       `}
       </style>
 

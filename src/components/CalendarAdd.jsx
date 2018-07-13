@@ -11,6 +11,10 @@ function CalendarAdd(){
       </div>
       <Nav/>
       <style jsx>{`
+        .calendar-add  {
+          padding: 0 2rem;
+          height: 562px;
+        }
 
       `}
       </style>

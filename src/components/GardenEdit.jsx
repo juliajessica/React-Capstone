@@ -11,6 +11,10 @@ function GardenEdit(){
       </div>
       <Nav/>
       <style jsx>{`
+        .garden-edit {
+          padding: 0 2rem;
+          height: 562px;
+        }
 
       `}
       </style>

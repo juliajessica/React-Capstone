@@ -11,7 +11,10 @@ function CalendarEdit(){
       </div>
       <Nav/>
       <style jsx>{`
-
+        .calendar-edit {
+          padding: 0 2rem;
+          height: 562px;
+        }
       `}
       </style>
 
