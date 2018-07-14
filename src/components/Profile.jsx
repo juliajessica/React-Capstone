@@ -31,7 +31,7 @@ function Profile(){
         .profile {
           margin-top: 0rem;
           padding: 0;
-          height: 562px;
+          height: 565px;
         }
         .profile-layout {
           background-image: url(${profileBgImg});
@@ -53,7 +53,7 @@ function Profile(){
           font-size: 1.3rem;
         }
         .plant2 {
-          padding-left: 7.3rem;
+          padding-left: 6rem;
         }
         .wrench-icon {
           position: absolute;

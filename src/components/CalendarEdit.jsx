@@ -17,7 +17,7 @@ function CalendarEdit(){
       <style jsx>{`
         .calendar-edit {
           padding: 0 2rem;
-          height: 562px;
+          height: 565px;
         }
         .calendar-btns {
           display: grid;

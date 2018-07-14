@@ -15,7 +15,7 @@ function PlantSearch(){
       <style jsx>{`
         .plant-Search{
           padding: 0 2rem;
-          height: 562px;
+          height: 565px;
         }
         .search-input {
           padding: .5rem;

@@ -12,8 +12,7 @@ function SignUp(){
       <Nav/>
       <style jsx>{`
         .sign-up {
-          padding: 0 2rem;
-          height: 562px;
+          height: 565px;
         }
       `}
       </style>

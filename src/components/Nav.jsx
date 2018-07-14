@@ -19,20 +19,19 @@ function Nav(){
 
     <style jsx>{`
       .navBar{
-        padding: 1rem;
+        padding: 1rem 0;
         height: 60px;
         width: 100%;
         color:red;
-        background-color: #FAD961;
+        background-image: linear-gradient(to bottom, #FAD961, #E18652);
       }
       .navImgs{
         padding: 0;
         display: flex;
         flex-direction: row;
-        justify-content: center;
         flex-basis: auto;
-        align-content: center;
-        place-content: start space-evenly;
+        align-items: center;
+        justify-content: space-around;
       }
       .navImgs img{
         align-items: center;

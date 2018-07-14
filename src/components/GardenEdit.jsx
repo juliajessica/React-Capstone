@@ -7,13 +7,24 @@ function GardenEdit(){
     <div>
       <div className="garden-edit">
         <h3>Garden Edit</h3>
+        <div className="user-name-edit">
+          <p>JULIA'S GARDEN</p>
+        </div>
+        <div className="vertile-line"></div>
 
       </div>
       <Nav/>
       <style jsx>{`
         .garden-edit {
-          padding: 0 2rem;
-          height: 562px;
+          height: 565px;
+        }
+        .user-name-edit{
+          background-color: #F9D7B5;
+          height: 200px;
+          width: 100%;
+        }
+        .user-name-edit p{
+          font-size: 3rem;
         }
 
       `}
