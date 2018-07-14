@@ -6,7 +6,8 @@ import registerServiceWorker from './registerServiceWorker';
 import { AppContainer } from 'react-hot-loader';
 import { HashRouter } from 'react-router-dom';
 //import { createStore } from 'redux';
-//import postListReducer from './reducers/post-list-reducer';
+//const store = createStore(reducer);
+//console.log(store.getState());
 //import { Provider } from 'react-redux';
 
 const render = (Component) => {

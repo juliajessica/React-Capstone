@@ -12,8 +12,9 @@ https://
 
 ## <span style="color:#74875d;">Application Planning</span>
 * <a href="/capstone-project-proposal.md">Independent Capstone Project Proposal</a>
-* <a href="/capstone-project-proposal.md">Create React App Original Notes</a>
+* <a href="/stateNotes.md">Notes on Movement of State in Application</a>
 * <a href="https://github.com/juliajessica/React-Capstone/blob/master/src/assets/imgs/componentTree.jpeg?raw=true">Component Tree</a>
+* <a href="/capstone-project-proposal.md">Create React App Original Notes</a>
 
 
 | Sketch Application |
