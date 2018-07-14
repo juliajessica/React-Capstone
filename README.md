@@ -13,6 +13,7 @@ https://
 ## <span style="color:#74875d;">Application Planning</span>
 * <a href="/capstone-project-proposal.md">Independent Capstone Project Proposal</a>
 * <a href="/capstone-project-proposal.md">Create React App Original Notes</a>
+* <a href="https://github.com/juliajessica/React-Capstone/blob/master/src/assets/imgs/componentTree.jpeg?raw=true">Component Tree</a>
 
 
 | Sketch Application |
@@ -23,10 +24,6 @@ https://
 | :------- |
 | ![Sketch Design for Nurture](src/assets/imgs/sketchParallax.png) |
 
-| Component Tree Structure |
-|:----------|
-| ![Component Tree](src/assets/imgs/componentTree.jpeg) |
-
 ## <span style="color:#74875d;">Description</span>
 
 _This webpage application is designed for users to search for plants they're interested in learning about and discover care instructions and details on how to nurture those particular plants._
@@ -34,7 +31,12 @@ _This webpage application is designed for users to search for plants they're int
 ## <span style="color:#74875d;">Setup/Installation Requirements</span> :computer:
 
 * Clone repository on your local computer.
-* Open Index.html in a browser Window
+* In the project directory, you can run:
+### `npm start`
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
 
 | Features | Status |
 |:----------|:----------|
@@ -51,7 +53,7 @@ _This webpage application is designed for users to search for plants they're int
 | Calendar Component: User can access the Calendar and view watering and fertilizing scheduled dates for their plants | In Progress |
 | Calendar Component: User will be able to remove tasks off the calendar once they are complete | In Progress |
 | Add Component: If the user doesn't know the type of plate they will be able to take a photo of their plant to search the database for more information | In Progress |
-| Add Parallax Features on the Homepage | ![Screenshot of Sketch Parallax Design](src/img/sketchParallax.png) |
+| Add Parallax Features on the Homepage | ![Sketch Design for Nurture](src/assets/imgs/sketchParallax.png) |
 
 
 ## <span style="color:#74875d;">Known Bugs</span>
