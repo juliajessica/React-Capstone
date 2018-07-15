@@ -11,6 +11,27 @@ Movement of State:
 3. add 'selected plant' to empty object in Garden and GardenEdit
 4. remove 'selected plant' from GardenEdit if user selected remove.
 
+1. task list []
+2. remove items
+3. add item to list
+
+[object Object] {
+  todos: [],
+  visabilityFilter: "SHOW_ALL"
+}
+
+      ADDING AN ITEM:
+[object Object] {
+  todos: [[object Object]{
+    completed: false,
+    id: 0,
+    text: ''
+  }],
+  visabilityFilter: "SHOW_ALL"
+
+  TASKS:
+  SHOW_ACTIVE
+  SHOW_ALL
 ---------------------------------------------------
 
 <!-- example to see the state structure

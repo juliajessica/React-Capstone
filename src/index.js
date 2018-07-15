@@ -7,6 +7,7 @@ import { AppContainer } from 'react-hot-loader';
 import { HashRouter } from 'react-router-dom';
 //import { createStore } from 'redux';
 //const store = createStore(plantSelectorReducer);
+//you're going to change this to rootReducer
 //console.log(store.getState());
 //import { Provider } from 'react-redux';
 
