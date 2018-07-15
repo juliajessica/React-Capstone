@@ -42,17 +42,21 @@ const plantSelectorReducer = (state = initialState, action) => {
   return state;
 }
 
-////2nd reducer (2)
-const reducer = (state = initialState, action) => {
+////selected plant reducer (2)
+const reducer = (state = initialState.selectedPlant, action) => {
   switch (action.type) {
-    case 'SELECTED_PLANT':
-    let newSelectedPlant = state.selectedPlant;
-    if (newSelectedPlant !=null) {
-      newSelectedPlant = </SOMECOMPONENT>
-    } else {
-      newSelectedPlant = </SOMECOMPONENT>
-    }
-    return newState;
+    case 'SELECT_PLANT':
+    return action.newSelectedPlant;
   default:
   return state;
+}
+
+
+//click listener for 2nd reducer
+const selectPlant = (plantData) => {
+  let action = {
+    type: 'SELECT_PLANT',
+    newSelectedPlant: plantData
+  }
+  store.dispatch(action);
 }

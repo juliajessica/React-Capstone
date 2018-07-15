@@ -1,6 +1,11 @@
 import React from 'react';
 import Nav from './Nav';
 import { Link } from 'react-router-dom';
+import plantSVG from './../assets/imgs/pagelines.svg';
+//<div className="singlePlant" onCLick=''>
+  //<img src={} />
+
+  //</div>
 
 function PlantSearch(){
 
@@ -10,6 +15,9 @@ function PlantSearch(){
         <h3>Plant Search</h3>
         <form>
           <input type="text" placeholder="SEARCH:" className="search-input"></input>
+
+            <h2 className="plant-name"><img src={plantSVG} className="leaf-icon"/>will have plant name</h2>
+
           <Link to='/plant-detail'><button>Details</button></Link>
         </form>
       </div>
@@ -31,6 +39,14 @@ function PlantSearch(){
         input[type=text] {
           color: white;
           background-color: #E18472;
+        }
+        .leaf-icon {
+          height: 20px;
+          padding: 0 1rem;
+          width: auto;
+        }
+        .plant-name {
+          text-transform: uppercase;
         }
       `}
       </style>

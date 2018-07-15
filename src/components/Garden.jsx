@@ -3,6 +3,7 @@ import Nav from './Nav';
 import add from './../assets/imgs/add.svg';
 import settings from './../assets/imgs/settings.svg';
 import { Link } from 'react-router-dom';
+//<img src={} />
 
 function Garden(){
 
@@ -16,8 +17,8 @@ function Garden(){
           </div>
           <div className="verticle-line"></div>
           <div className="plant-garden">
-            <p>will have image</p>
-            <p>will have plant name</p>
+
+            <h1>will have plant name</h1>
             <Link to='/garden-edit'><img src={settings} alt="setting icon to edit garden"/></Link>
           </div>
       </div>

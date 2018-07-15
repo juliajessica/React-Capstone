@@ -13,7 +13,6 @@ import peperomia from './../assets/imgs/peperomia.jpg';
 import airplant from './../assets/imgs/airplant.jpg';
 import spider from './../assets/imgs/spider.jpg';
 import aloe from './../assets/imgs/aloe.jpg';
-
 import plantSVG from './../assets/imgs/pagelines.svg';
 
 
