@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from './Nav';
+import { Link } from 'react-router-dom';
 
 function PlantSearch(){
 
@@ -9,6 +10,7 @@ function PlantSearch(){
         <h3>Plant Search</h3>
         <form>
           <input type="text" placeholder="SEARCH:" className="search-input"></input>
+          <Link to='/plant-detail'><button>Details</button></Link>
         </form>
       </div>
       <Nav/>
