@@ -7,7 +7,25 @@ import plantSVG from './../assets/imgs/pagelines.svg';
 
   //</div>
 
+  // {Oject.keys(props.plantData).map(function(plantId){
+  //   let plant = props.plantData[plantId];
+  //   return <PlantDescription
+  //     name={plant.name}
+  //     image={plant.image}
+  //     description={plant.description}
+  //     maintenance={plant.maintenance}
+  //     water={plant.water}
+  //     exposure={plant.exposure}
+  //     growthPeriod={plant.growthPeriod}
+  //     bloom={plant.bloom}
+  //     key={plantId}
+  //     id={plantId}
+  //     />;
+  // })}
+
 function PlantSearch(){
+
+
 
   return(
     <div>

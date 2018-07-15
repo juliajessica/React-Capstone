@@ -15,7 +15,6 @@ import spider from './../assets/imgs/spider.jpg';
 import aloe from './../assets/imgs/aloe.jpg';
 import plantSVG from './../assets/imgs/pagelines.svg';
 
-
 const plantData = {
   1: {
     name: "African Daisy",

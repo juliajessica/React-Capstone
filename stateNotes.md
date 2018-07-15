@@ -43,7 +43,7 @@ const plantSelectorReducer = (state = initialState, action) => {
 }
 
 ////selected plant reducer (2)
-const reducer = (state = initialState.selectedPlant, action) => {
+const plantSelectorReducer = (state = initialState.selectedPlant, action) => {
   switch (action.type) {
     case 'SELECT_PLANT':
     return action.newSelectedPlant;
