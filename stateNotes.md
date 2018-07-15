@@ -57,12 +57,12 @@ const initialState = {
 //if you're creating a separate reducer for new functionality then you will address the reducers at initialState.selectedPlant
 
 //Redux Reducer (1) - complete
-const plantSelectorReducer = (state = initialState, action) => {
+const plantSelectedReducer = (state = initialState, action) => {
   return state;
 }
 
 ////selected plant reducer (2)
-const plantSelectorReducer = (state = initialState.selectedPlant, action) => {
+const plantSelectedReducer = (state = initialState.selectedPlant, action) => {
   switch (action.type) {
     case 'SELECT_PLANT':
     return action.newSelectedPlant;
