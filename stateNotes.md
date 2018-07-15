@@ -30,13 +30,13 @@ import plantData from './plantData';
 
 // INITIAL REDUX STATE
 const initialState = {
-  plantData: plantData,
-  selectedPlant: null,
-  plantPosition: 0,
+  plantData: plantData,  //songsById  - all of state
+  selectedPlant: null,  //currentSongId - one plant by id
+  plantPosition: 0, //
 }
 
 //Redux Reducer (1) - complete
-const reducer = (state = initialState, action) => {
+const plantSelectorReducer = (state = initialState, action) => {
   return state;
 }
 
@@ -44,6 +44,7 @@ const reducer = (state = initialState, action) => {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'PLANT_POSTION':
+     let newPlantPostion =
 
     }
   }
@@ -54,11 +55,14 @@ const reducer = (state = initialState, action) => {
 ////2nd reducer (3)
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'SELECTED_TICKET':
+    case 'SELECTED_PLANT':
     let newSelectedPlant = state.selectedPlant;
     if (newSelectedPlant !=null) {
-      newSelectedPlant ///stopped here
-    } return newState;
-  } default:
+      newSelectedPlant = </SOMECOMPONENT>
+    } else {
+      newSelectedPlant = </SOMECOMPONENT>
+    }
+    return newState;
+  default:
   return state;
 }
