@@ -15,14 +15,15 @@ Movement of State:
 
 <!-- example to see the state structure
  13: {
-    "name": "Air Plant",
-    "image": airplant,
-    "description": "Air plants grow without dirt and come in all sizes and colors. Air plants attach themselves to rocks, trees, shrubs, or the ground with their roots and are native to the southern United States, Mexico, Central America, and South America.",
-    "maintenance": plantSVG,
-    "water": "1x a week",
-    "exposure": "Medium to a high light",
-    "growthPeriod": "Spring, Summer",
-    "bloom": "Mid Spring"
+    name: "Air Plant",
+    image: airplant,
+    description: "Air plants grow without dirt and come in all sizes and colors. Air plants attach themselves to rocks, trees, shrubs, or the ground with their roots and are native to the southern United States, Mexico, Central America, and South America.",
+    maintenance: plantSVG,
+    water: "1x a week",
+    exposure: "Medium to a high light",
+    growthPeriod: "Spring, Summer",
+    bloom: "Mid Spring"
+    id: 13
 },  -->
 
 import plantData from './plantData';
@@ -32,27 +33,16 @@ import plantData from './plantData';
 const initialState = {
   plantData: plantData,  //songsById  - all of state
   selectedPlant: null,  //currentSongId - one plant by id
-  plantPosition: 0, //
 }
+
+//if you're creating a separate reducer for new functionality then you will address the reducers at initialState.selectedPlant
 
 //Redux Reducer (1) - complete
 const plantSelectorReducer = (state = initialState, action) => {
   return state;
 }
 
-//add action to initial Reducer (2)
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'PLANT_POSTION':
-     let newPlantPostion =
-
-    }
-  }
-  return state;
-}
-
-
-////2nd reducer (3)
+////2nd reducer (2)
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'SELECTED_PLANT':
