@@ -47,8 +47,6 @@ Movement of State:
     id: 13
 },  -->
 
-import plantData from './plantData';
-
 
 // INITIAL REDUX STATE
 const initialState = {

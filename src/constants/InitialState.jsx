@@ -181,4 +181,10 @@ const plantData = {
   }
 };
 
-export default plantData;
+// INITIAL REDUX STATE
+export const initialState = {
+  plantData: plantData,  // - all of state
+  selectedPlant: null,  //one plant by id
+};
+
+//export default initialState;
