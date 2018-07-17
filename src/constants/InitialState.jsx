@@ -11,7 +11,7 @@ import gardenia from './../assets/imgs/gardenia.jpg';
 import peaceLily from './../assets/imgs/peaceLily.jpg';
 import peperomia from './../assets/imgs/peperomia.jpg';
 import airplant from './../assets/imgs/airplant.jpg';
-import spider from './../assets/imgs/spider.jpg';
+import spider from './../assets/imgs/spider.jpeg';
 import aloe from './../assets/imgs/aloe.jpg';
 import plantSVG from './../assets/imgs/pagelines.svg';
 
@@ -62,7 +62,7 @@ const plantData = {
       name: "Ficus Elastica",
       image: ficus,
       description: "The rubber plant (Ficus elastica) is a popular ornamental plant from the Ficus genus. In it's natural habitat it grows over 30 metres tall, however, the varieties grown indoors are a much more manageable height.",
-      maintenance: plantSVG + plantSVG + plantSVG
+      maintenance: plantSVG + plantSVG + plantSVG,
       water: "2x a week",
       exposure: "Window Sunlight",
       growthPeriod: "Spring, Summer, Fall",
@@ -106,7 +106,7 @@ const plantData = {
       name: "Athena Peony",
       image: athenaPeony,
       description: "Athena is an apricot buff single with raspberry flares.  It has the size, shape & texture reminiscent of a Magnolia and is also mildly fragrant.",
-      maintenance: plantSVG
+      maintenance: plantSVG,
       water: "1x every 7-10 days",
       exposure: "Full sun or partial shade",
       growthPeriod: "Spring, Summer, Fall, Winter",
@@ -161,7 +161,7 @@ const plantData = {
       name: "Spider Plant",
       image: spider,
       description: "The spider plant is so named because of its spider-like plants, or spiderettes, which dangle down from the mother plant like spiders on a web. Available in green or variegated varieties, these spiderettes often start out as small white flowers.",
-      maintenance: plantSVG + plantSVG
+      maintenance: plantSVG + plantSVG,
       water: "1-2x a week",
       exposure: "Medium to a high light",
       growthPeriod: "Spring, Summer",
@@ -187,4 +187,4 @@ export const initialState = {
   selectedPlant: null,  //one plant by id
 };
 
-//export default initialState;
+export default plantData;

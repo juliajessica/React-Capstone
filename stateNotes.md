@@ -2,8 +2,8 @@ Application State:
 
 slices of state:
 * state
-* selectedState
-* newState
+* selectedPlant
+* add/remove todo list items
 
 Movement of State:
 1. display all state in PlantSearch

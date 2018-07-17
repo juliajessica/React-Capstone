@@ -1,5 +1,6 @@
-import { combineReducers } from 'redux';
+
 import plantSelectedReducer from './plantSelectedReducer';
+import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
   selectedPlant: plantSelectedReducer

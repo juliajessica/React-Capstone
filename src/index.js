@@ -1,20 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App.jsx';
+import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 import { AppContainer } from 'react-hot-loader';
 import { HashRouter } from 'react-router-dom';
-//import { createStore } from 'redux';
-//const store = createStore(rootReducer);
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import rootReducer from './reducers/index';
 //console.log(store.getState());
-//import { Provider } from 'react-redux';
+
+const store = createStore(rootReducer);
+
+let unsubscribe = store.subscribe(() =>
+  console.log(store.getState())
+);
 
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
       <HashRouter>
-        <Component/>
+        <Provider store={store}>
+          <Component/>
+        </Provider>
       </HashRouter>
     </AppContainer>,
     document.getElementById('react-app-root')
@@ -24,12 +32,9 @@ const render = (Component) => {
 
 render(App);
 
-//<Provider store={ store }>
-//</Provider>
-
 /* eslint-disable */
 if (module.hot) {
-  module.hot.accept('./components/App', () => {
+  module.hot.accept(require('./components/App'), () => {
     render(App);
   });
 }
