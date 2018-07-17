@@ -34,7 +34,7 @@ function PlantSearch(){
         <form>
           <input type="text" placeholder="SEARCH:" className="search-input"></input>
 
-            <h2 className="plant-name"><img src={plantSVG} className="leaf-icon"/>will have plant name</h2>
+            <h2 className="plant-name"><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>will have plant name</h2>
 
           <Link to='/plant-detail'><button>Details</button></Link>
         </form>
