@@ -22,7 +22,7 @@ import PlantList from './PlantList';
 // })}
 
 
-const PlantSearch = ({ dispatch, allPlantData }) => {
+function PlantSearch(props) {
   //const {name, image} = allPlantData;
   //console.log(state.plantData);
   return(
@@ -46,8 +46,12 @@ const PlantSearch = ({ dispatch, allPlantData }) => {
                   bloom={plant.bloom}
                   key={plantId}
                   id={plantId}
+                  liftedPlantData={plantData}
+
                   />;
               })}
+              console.log(liftedPlantData);
+
             </div>
 
 
@@ -91,16 +95,18 @@ const PlantSearch = ({ dispatch, allPlantData }) => {
 
 PlantSearch.propTypes = {
   plantData: PropTypes.object,
-  dispatch: PropTypes.func
+  //dispatch: PropTypes.func
 };
 
 //console.log(plantData);
 
 
 // const mapStateToProps = state => {
-//
-// }
+//   return {
+//     plantData: state.plantData
+//   };
+// };
 
-export default connect()(PlantSearch);
+export default PlantSearch;
 
 //<PlantDescription />

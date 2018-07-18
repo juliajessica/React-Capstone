@@ -51,6 +51,10 @@
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "jsx-a11y/img-redundant-alt": [ 2, {
+            "components": [ "Image" ],
+            "words": [ "Bild", "Foto" ],
+          }],
     }
 }

@@ -1,14 +1,20 @@
 import React from 'react';
-//import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-function plantDescription(){
+function plantDescription(props){
 
   return(
     <div>
       <h1>plant description</h1>
+      <p>{props.selectedPlant.name}</p>
 
     </div>
   );
 }
+
+
+plantDescription.propTypes = {
+  selectedPlant: PropTypes.object
+};
 
 export default plantDescription;

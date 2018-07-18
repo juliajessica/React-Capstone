@@ -15,10 +15,13 @@ import plantSVG from './../assets/imgs/pagelines.svg';
 
 
 function PlantList(props){
+  let viewSinglePlant = null;
+
+//  if (props.plantData.selectedPlant)
 
   return(
     <div>
-      <div className="single-plant-flex">
+      <div className="single-plant-flex" onClick={()=> {}}>
         <div className="plant-list-img">
           <img src={props.image} alt="image of plant" className="image-resize" />
         </div>
@@ -52,10 +55,17 @@ PlantList.propTypes = {
   plantData: PropTypes.object,
   image: PropTypes.string,
   name: PropTypes.string,
-
+  description: PropTypes.string,
+  maintenance: PropTypes.string,
+  water: PropTypes.string,
+  exposure: PropTypes.string,
+  growthPeriod: PropTypes.string,
+  bloom: PropTypes.string,
+  key: PropTypes.string,
+  id: PropTypes.string,
 };
-const mapStateToProps = {
-
-};
+// const mapStateToProps = {
+//
+// };
 
 export default connect()(PlantList);
