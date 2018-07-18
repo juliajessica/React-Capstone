@@ -1,35 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import plantData from './../constants/InitialState';
+//import plantData from './../constants/InitialState';
 import plantSVG from './../assets/imgs/pagelines.svg';
-import { plantSelectedReducer } from './../actions'
+import { viewPlantDetails } from './../actions'
 
 // if (state.selectedPlant != null){
 //   let newSelectedPlant = <>
 // }
 
-// //<img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{props.name}</h2>
-//
-//
+const PlantList = ({ dispatch, name, image, description }) => {
+  console.log(name);
 
-function PlantList(props){
-  let viewSinglePlant = null;
-  let plant = plantData[props.id];
-  console.log(plant);
+    // const { image, name, id } = plantData;
+    const viewSinglePlant = null;
+  // const selectedPlant = plantData[id];
+  // console.log(selectedPlant);
 //  if (props.plantData.selectedPlant)
 //  if (song)
+//
+//     if (viewSinglePlant != null){
+//       dispatch(viewPlantDetails(id));
+//     }<h2 className="plant-name"><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{name}</h2>
+//   }}>
+  // {selectedPlant}
+    // <img src={image} alt="image of plant" className="image-resize" />
+    //   <h2 className="plant-name"><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{name}</h2>
   return(
     <div>
-      <div className="single-plant-flex" onClick={()=> {
-          if(viewSinglePlant != null){
-            dispatch()
-          }
-        }}>
+         <div className="single-plant-flex">
+           <h2><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{name}</h2>
+
+
+
         <div className="plant-list-img">
-          <img src={props.image} alt="image of plant" className="image-resize" />
+          <img src={image} alt="image of plant" className="image-resize" />
         </div>
-        <h2 className="plant-name"><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{props.name}</h2>
+
       </div>
       <style jsx>{`
         .plant-list-img {
@@ -52,24 +59,28 @@ function PlantList(props){
       </style>
     </div>
   );
-}
+};
 
 
 PlantList.propTypes = {
-  plantData: PropTypes.object,
+  dispatch: PropTypes.func,
   image: PropTypes.string,
-  name: PropTypes.string,
-  description: PropTypes.string,
-  maintenance: PropTypes.string,
-  water: PropTypes.string,
-  exposure: PropTypes.string,
-  growthPeriod: PropTypes.string,
-  bloom: PropTypes.string,
+  // name: PropTypes.string,
+  // description: PropTypes.string,
+  // maintenance: PropTypes.string,
+  // water: PropTypes.string,
+  // exposure: PropTypes.string,
+  // growthPeriod: PropTypes.string,
+  // bloom: PropTypes.string,
   key: PropTypes.string,
   id: PropTypes.string,
 };
-// const mapStateToProps = {
-//
+
+// const mapStateToProps = state.selectedPlant => {
+//   return {
+//     plantData: state.plantData,
+//     selectedPlant: state.selectedPlant
+//   };
 // };
 
 export default connect()(PlantList);

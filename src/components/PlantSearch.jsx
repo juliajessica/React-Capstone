@@ -1,62 +1,59 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import plantData from './../constants/InitialState';
+//import plantData from './../constants/InitialState';
 import PlantList from './PlantList';
-
-// <div className="singlePlant" onCLick=''>
-// {Object.keys(props.plantData).map(function(plantId){
-//  let plant = props.plantData[plantId];
-//    return <PlantDescription
-//     name={plant.name}
-//     image={plant.image}
-//     description={plant.description}
-//     maintenance={plant.maintenance}
-//     water={plant.water}
-//     exposure={plant.exposure}
-//     growthPeriod={plant.growthPeriod}
-//     bloom={plant.bloom}
-//     key={plantId}
-//     id={plantId}
-//     />;
-// })}
-
 
 function PlantSearch(props) {
   //const {name, image} = allPlantData;
   //console.log(state.plantData);
+
+
+//console.log(plant);
+
+// if selectedPlant (referrring to props being mapped at bottom of file) is equal to the plantID from loop, render additional viewPlantDetails
+//<detail component></detail>
+// return <PlantDetail
+//    name={plant.name}
+//    image={plant.image}
+//    description={plant.description}
+//    maintenance={plant.maintenance}
+//    water={plant.water}
+//    exposure={plant.exposure}
+//    growthPeriod={plant.growthPeriod}
+//    bloom={plant.bloom}
+//    key={plantId}
+//    id={plantId}
+//    />;
+
   return(
     <div>
       <div className="plant-Search">
 
         <h3>Plant Search</h3>
-        <form>
-          <input type="text" placeholder="SEARCH:" className="search-input"></input>
-            <div className="singlePlant">
-              {Object.keys(plantData).map(function(plantId){
-               let plant = plantData[plantId];
-                 return <PlantList
-                  name={plant.name}
-                  image={plant.image}
-                  description={plant.description}
-                  maintenance={plant.maintenance}
-                  water={plant.water}
-                  exposure={plant.exposure}
-                  growthPeriod={plant.growthPeriod}
-                  bloom={plant.bloom}
-                  key={plantId}
-                  id={plantId}
-                  liftedPlantData={plantData}
+          <form>
+            <input type="text" placeholder="SEARCH:" className="search-input"></input>
+              <div className="singlePlant">
+                {Object.keys(props.plantData).map(function(plantId){
+                 let plant = props.plantData[plantId];
 
-                  />;
-              })}
-              console.log(liftedPlantData);
+                   return <PlantList
+                    name={plant.name}
+                    image={plant.image}
+                    description={plant.description}
+                    maintenance={plant.maintenance}
+                    water={plant.water}
+                    exposure={plant.exposure}
+                    growthPeriod={plant.growthPeriod}
+                    bloom={plant.bloom}
+                    key={plantId}
+                    id={plantId}
+                    />;
 
-            </div>
+                })}
 
-
-
-        </form>
+              </div>
+          </form>
       </div>
 
 
@@ -95,18 +92,28 @@ function PlantSearch(props) {
 
 PlantSearch.propTypes = {
   plantData: PropTypes.object,
-  //dispatch: PropTypes.func
+  image: PropTypes.string,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  maintenance: PropTypes.string,
+  water: PropTypes.string,
+  exposure: PropTypes.string,
+  growthPeriod: PropTypes.string,
+  bloom: PropTypes.string,
+  key: PropTypes.string,
+  id: PropTypes.string,
 };
 
 //console.log(plantData);
 
 
-// const mapStateToProps = state => {
-//   return {
-//     plantData: state.plantData
-//   };
-// };
+const mapStateToProps = state => {
+  return {
+    plantData: state.plantData,
+    selectedPlant: state.selectedPlant
+  };
+};
 
-export default PlantSearch;
+export default connect(mapStateToProps)(PlantSearch);
 
 //<PlantDescription />

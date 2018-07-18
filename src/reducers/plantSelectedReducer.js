@@ -1,12 +1,15 @@
 import constants from './../constants';
 const { initialState, types } = constants;
 
-const plantSelectedReducer = (state = initialState.selectedPlant, action) => {
-  //console.log(state);
+const plantSelectedReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.SELECT_PLANT:
-
-    return action.newSelectedPlant;
+    let newState = {
+      plantData: initialState.plantData,
+      selectedPlant: action.newSelectedPlantId,
+    }
+    console.log(newState);
+    return newState;
   default:
     return state;
   }
