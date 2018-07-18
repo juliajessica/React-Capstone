@@ -9,7 +9,6 @@ function SignUp(){
         <h3>Sign Up</h3>
 
       </div>
-      <Nav/>
       <style jsx>{`
         .sign-up {
           height: 565px;

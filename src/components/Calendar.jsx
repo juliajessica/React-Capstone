@@ -13,7 +13,6 @@ function Calendar(){
             <Link to='/calendar-add'><button type="button" className="add-cal">ADD</button></Link>
           </div>
       </div>
-      <Nav />
       <style jsx>{`
         .calendar {
           padding: 0 2rem;

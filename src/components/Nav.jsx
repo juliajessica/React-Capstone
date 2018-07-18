@@ -23,6 +23,7 @@ function Nav(){
         height: 60px;
         width: 100%;
         background-image: linear-gradient(to bottom, #FAD961, #E18652);
+        position: fixed;
       }
       .navImgs{
         padding: 0;

@@ -22,7 +22,6 @@ function Garden(){
             <Link to='/garden-edit'><img src={settings} alt="setting icon to edit garden"/></Link>
           </div>
       </div>
-      <Nav />
       <style jsx>{`
         .garden {
           margin-top: 0rem;

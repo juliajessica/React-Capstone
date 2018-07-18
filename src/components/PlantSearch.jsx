@@ -55,9 +55,8 @@ const PlantSearch = ({ dispatch, allPlantData }) => {
 
         </form>
       </div>
-      <div className="plant-search-nav">
-        <Nav/>
-      </div>
+
+
       <style jsx>{`
         .plant-Search{
           padding: 0 2rem;
@@ -84,12 +83,7 @@ const PlantSearch = ({ dispatch, allPlantData }) => {
         .plant-name {
           text-transform: uppercase;
         }
-        .plant-search-nav {
-          padding: 1rem 0;
-          height: 60px;
-          width: 100%;
-          position: fixed;
-        }
+
       `}
       </style>
     </div>

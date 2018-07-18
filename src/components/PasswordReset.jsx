@@ -9,7 +9,6 @@ function PasswordReset(){
         <h3>Password Reset</h3>
 
       </div>
-      <Nav/>
       <style jsx>{`
         .password-reset {
           height: 565px;

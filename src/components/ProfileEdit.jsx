@@ -24,7 +24,6 @@ function ProfileEdit(){
             </div>
           </div>
         </div>
-        <Nav />
         <style jsx>{`
           .profile-edit {
             margin-top: 0rem;

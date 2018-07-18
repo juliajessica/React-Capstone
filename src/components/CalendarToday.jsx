@@ -9,7 +9,6 @@ function CalendarToday(){
         <h3>Calendar Today</h3>
 
       </div>
-      <Nav/>
       <style jsx>{`
         .calendar-today {
           padding: 0 2rem;

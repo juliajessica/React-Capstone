@@ -13,7 +13,6 @@ function GardenEdit(){
         <div className="vertile-line"></div>
 
       </div>
-      <Nav/>
       <style jsx>{`
         .garden-edit {
           height: 565px;

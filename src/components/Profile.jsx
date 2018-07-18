@@ -24,9 +24,7 @@ function Profile(){
           </div>
         </div>
 
-
       </div>
-      <Nav />
       <style jsx>{`
         .profile {
           margin-top: 0rem;
@@ -38,7 +36,7 @@ function Profile(){
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
-          height: 630px;
+          height: 560px;
           width: 100%;
         }
         .profile-Img {
