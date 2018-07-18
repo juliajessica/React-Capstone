@@ -1,10 +1,8 @@
 import React from 'react';
 import Nav from './Nav';
-import { Link } from 'react-router-dom';
-import plantSVG from './../assets/imgs/pagelines.svg';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import PlantData from './../constants/InitialState';
+import plantData from './../constants/InitialState';
 import PlantList from './PlantList';
 
 // <div className="singlePlant" onCLick=''>
@@ -36,8 +34,8 @@ const PlantSearch = ({ dispatch, allPlantData }) => {
         <form>
           <input type="text" placeholder="SEARCH:" className="search-input"></input>
             <div className="singlePlant">
-              {Object.keys(props.plantData).map(function(plantId){
-               let plant = props.plantData[plantId];
+              {Object.keys(plantData).map(function(plantId){
+               let plant = plantData[plantId];
                  return <PlantList
                   name={plant.name}
                   image={plant.image}
@@ -54,9 +52,7 @@ const PlantSearch = ({ dispatch, allPlantData }) => {
             </div>
 
 
-            <h2 className="plant-name"><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>will have plant name</h2>
 
-          <Link to='/plant-detail'><button>Details</button></Link>
         </form>
       </div>
       <Nav/>
@@ -97,10 +93,13 @@ PlantSearch.propTypes = {
   dispatch: PropTypes.func
 };
 
-const mapStateToProps = state => {
+console.log(plantData);
 
-}
 
-export default connect(mapStateToProps)(PlantSearch);
+// const mapStateToProps = state => {
+//
+// }
+
+export default connect()(PlantSearch);
 
 //<PlantDescription />
