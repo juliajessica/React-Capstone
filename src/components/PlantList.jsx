@@ -28,15 +28,11 @@ const PlantList = ({ dispatch, name, image, description }) => {
     //   <h2 className="plant-name"><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{name}</h2>
   return(
     <div>
-         <div className="single-plant-flex">
-           <h2><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{name}</h2>
-
-
-
-        <div className="plant-list-img">
-          <img src={image} alt="image of plant" className="image-resize" />
-        </div>
-
+     <div className="single-plant-flex"></div>
+       <div className="plant-list-img">
+         <img src={image} alt="image of plant" className="image-resize" />
+       </div>
+       <h2><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{name}</h2>
       </div>
       <style jsx>{`
         .plant-list-img {
@@ -65,13 +61,6 @@ const PlantList = ({ dispatch, name, image, description }) => {
 PlantList.propTypes = {
   dispatch: PropTypes.func,
   image: PropTypes.string,
-  // name: PropTypes.string,
-  // description: PropTypes.string,
-  // maintenance: PropTypes.string,
-  // water: PropTypes.string,
-  // exposure: PropTypes.string,
-  // growthPeriod: PropTypes.string,
-  // bloom: PropTypes.string,
   key: PropTypes.string,
   id: PropTypes.string,
 };

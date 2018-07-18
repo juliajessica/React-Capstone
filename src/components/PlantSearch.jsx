@@ -11,6 +11,22 @@ function PlantSearch(props) {
 
 //console.log(plant);
 
+
+// const selectedPlant = plantData[id];
+// console.log(selectedPlant);
+//  if (props.plantData.selectedPlant)
+//  if (song)
+//
+//     if (viewSinglePlant != null){
+//       dispatch(viewPlantDetails(id));
+//     }<h2 className="plant-name"><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{name}</h2>
+//   }}>
+// {selectedPlant}
+  // <img src={image} alt="image of plant" className="image-resize" />
+  //   <h2 className="plant-name"><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{name}</h2>
+
+
+//THIS IS WHAT I NEED TO DO!!!!
 // if selectedPlant (referrring to props being mapped at bottom of file) is equal to the plantID from loop, render additional viewPlantDetails
 //<detail component></detail>
 // return <PlantDetail
