@@ -22,7 +22,6 @@ function Nav(){
         padding: 1rem 0;
         height: 60px;
         width: 100%;
-        color:red;
         background-image: linear-gradient(to bottom, #FAD961, #E18652);
       }
       .navImgs{

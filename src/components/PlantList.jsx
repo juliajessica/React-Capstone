@@ -11,17 +11,36 @@ import plantSVG from './../assets/imgs/pagelines.svg';
 //   let newSelectedPlant = <>
 // }
 
+// //<img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{props.name}</h2>
+//
+//
+
+
 function PlantList(props){
 
   return(
     <div>
       <h1>plant list</h1>
       <h2 className="plant-name">
-        <img src={props.image} alt="image of plant" />
-        <img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>name will go here {props.name}</h2>
+        <div className="plant-list-img">
+            <img src={props.image} alt="image of plant" className="image-resize"/>
+        </div>
+
+        <img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{props.name}</h2>
 
     <Link to='/plant-detail'><button>Details</button></Link>
-      <style jsx>
+      <style jsx>{`
+        .plant-list-img {
+          display: block;
+          overflow: hidden;
+          height: 100px;
+          width: 100px;
+        }
+        .image-resize {
+          width: 100px;
+        }
+          `}
+      </style>
     </div>
   );
 }
