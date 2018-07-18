@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-//import plantData from './../constants/InitialState';
+import plantData from './../constants/InitialState';
 import plantSVG from './../assets/imgs/pagelines.svg';
-
+import { plantSelectedReducer } from './../actions'
 
 // if (state.selectedPlant != null){
 //   let newSelectedPlant = <>
@@ -13,15 +13,19 @@ import plantSVG from './../assets/imgs/pagelines.svg';
 //
 //
 
-
 function PlantList(props){
   let viewSinglePlant = null;
-
+  let plant = plantData[props.id];
+  console.log(plant);
 //  if (props.plantData.selectedPlant)
-
+//  if (song)
   return(
     <div>
-      <div className="single-plant-flex" onClick={()=> {}}>
+      <div className="single-plant-flex" onClick={()=> {
+          if(viewSinglePlant != null){
+            dispatch()
+          }
+        }}>
         <div className="plant-list-img">
           <img src={props.image} alt="image of plant" className="image-resize" />
         </div>
