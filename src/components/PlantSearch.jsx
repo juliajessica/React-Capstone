@@ -1,5 +1,4 @@
 import React from 'react';
-import Nav from './Nav';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import plantData from './../constants/InitialState';

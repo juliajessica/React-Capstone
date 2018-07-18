@@ -1,5 +1,4 @@
 import React from 'react';
-import Nav from './Nav';
 import profileBgImg from './../assets/imgs/profile-bg.svg';
 import profileImg from './../assets/imgs/profileImg.svg';
 import leaf from './../assets/imgs/leaf.svg';

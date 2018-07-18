@@ -1,5 +1,4 @@
 import React from 'react';
-import Nav from './Nav';
 import add from './../assets/imgs/add.svg';
 import settings from './../assets/imgs/settings.svg';
 import { Link } from 'react-router-dom';
