@@ -93,7 +93,7 @@ PlantSearch.propTypes = {
   dispatch: PropTypes.func
 };
 
-console.log(plantData);
+//console.log(plantData);
 
 
 // const mapStateToProps = state => {
