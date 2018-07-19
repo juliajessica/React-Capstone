@@ -6,7 +6,6 @@ import SinglePlant from './SinglePlant';
 //import { viewPlantDetails } from './../actions';
 
 
-
 //need to change this into a classbased component
 function PlantSearchContainer(props) {
 
