@@ -3,8 +3,13 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 //import plantData from './../constants/InitialState';
 import SinglePlant from './SinglePlant';
+//import { viewPlantDetails } from './../actions';
 
+
+
+//need to change this into a classbased component
 function PlantSearchContainer(props) {
+
   //const {name, image} = allPlantData;
   //console.log(state.plantData);
 
@@ -41,7 +46,7 @@ function PlantSearchContainer(props) {
 //    key={plantId}
 //    id={plantId}
 //    />;
-
+  // console.log(plant);
   return(
     <div>
       <div className="plant-Search">
@@ -51,7 +56,7 @@ function PlantSearchContainer(props) {
             <input type="text" placeholder="SEARCH:" className="search-input"></input>
               <div className="singlePlant">
                 {Object.keys(props.plantData).map(function(plantId){
-                 let plant = props.plantData[plantId];
+                  let plant = props.plantData[plantId];
 
                    return <SinglePlant
                     name={plant.name}
@@ -64,6 +69,7 @@ function PlantSearchContainer(props) {
                     bloom={plant.bloom}
                     key={plantId}
                     id={plantId}
+                    plant={plant}
                     />;
 
                 })}
@@ -122,7 +128,7 @@ PlantSearchContainer.propTypes = {
 
 //console.log(plantData);
 
-
+//same as function mapStateToProps(state)
 const mapStateToProps = state => {
   return {
     plantData: state.plantData,
