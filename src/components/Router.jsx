@@ -3,7 +3,7 @@ import Error404 from './Error404';
 import Login from './Login.jsx';
 import SignUp from './SignUp.jsx';
 import PasswordReset from './PasswordReset';
-import PlantSearch from './PlantSearch';
+import PlantSearchContainer from './PlantSearchContainer';
 import SinglePlant from './SinglePlant';
 import PlantDescription from './PlantDescription';
 import Calendar from './Calendar';
@@ -30,7 +30,7 @@ class Router extends Component {
           <Route path='/calendar-edit' component={CalendarEdit}/>
           <Route path='/calendar-add' component={CalendarAdd}/>
           <Route path='/calendar-today' component={CalendarToday}/>
-          <Route path='/plant-search' component={PlantSearch}/>
+          <Route path='/plant-search' component={PlantSearchContainer}/>
           <Route path='/plant' component={SinglePlant}/>
           <Route path='/plant-detail' component={PlantDescription}/>
           <Route path='/garden' component={Garden}/>

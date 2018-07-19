@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 //import plantData from './../constants/InitialState';
 import SinglePlant from './SinglePlant';
 
-function PlantSearch(props) {
+function PlantSearchContainer(props) {
   //const {name, image} = allPlantData;
   //console.log(state.plantData);
 
@@ -106,7 +106,7 @@ function PlantSearch(props) {
   );
 };
 
-PlantSearch.propTypes = {
+PlantSearchContainer.propTypes = {
   plantData: PropTypes.object,
   image: PropTypes.string,
   name: PropTypes.string,
@@ -130,6 +130,6 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(PlantSearch);
+export default connect(mapStateToProps)(PlantSearchContainer);
 
 //<PlantDescription />
