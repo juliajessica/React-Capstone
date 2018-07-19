@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import EditButton from './EditButton';
+import AddButton from './AddButton';
 
 function CalendarEdit(){
 
@@ -8,8 +10,8 @@ function CalendarEdit(){
       <div className="calendar-edit">
         <h3>Calendar Edit</h3>
           <div className="calendar-btns">
-            <Link to='/calendar-edit'><button type="button" className="edit-cal">EDIT</button></Link>
-            <Link to='/calendar-add'><button type="button" className="add-cal">ADD</button></Link>
+          <EditButton/>
+          <AddButton/>
           </div>
       </div>
       <style jsx>{`
@@ -24,28 +26,6 @@ function CalendarEdit(){
           grid-auto-rows: 75px;
           grid-auto-flow: dense;
 
-        }
-        .edit-cal {
-          font-size: .8rem;
-          color: white;
-          width: 10rem;
-          background-color:#0A07DF;
-          border-radius: 5px;
-          padding: .5rem 0;
-          margin: .3rem 0;
-          border: 0px solid;
-          opacity: .8;
-        }
-        .add-cal {
-          font-size: .8rem;
-          color: white;
-          width: 10rem;
-          background-color:#EBAFA4;
-          border-radius: 5px;
-          padding: .5rem 0;
-          margin: .3rem 0;
-          border: 0px solid;
-          opacity: .8;
         }
       `}
       </style>
