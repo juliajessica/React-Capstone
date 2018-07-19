@@ -12,11 +12,10 @@ function Garden(){
         <h3>Garden</h3>
           <div className="user-name">
             <p>JULIA'S GARDEN</p>
-            <Link to='/garden-edit'><img src={add} alt="Add to Garden"/></Link>
+            <Link to='/garden-edit' className="add-icon"><img src={add} alt="Add to Garden" /></Link>
           </div>
           <div className="verticle-line"></div>
           <div className="plant-garden">
-
             <h1>will have plant name</h1>
             <Link to='/garden-edit'><img src={settings} alt="setting icon to edit garden"/></Link>
           </div>
@@ -24,7 +23,7 @@ function Garden(){
       <style jsx>{`
         .garden {
           margin-top: 0rem;
-          padding: 0;
+          margin: auto;
           height: 565px;
         }
         .user-name{
@@ -35,13 +34,16 @@ function Garden(){
           align-items: center;
           justify-content: space-between;
         }
-        .user-name p, img{
+        .user-name {
           font-size: 2.6rem;
           color: white;
-          padding-left: 1rem;
+          padding: 0 1.3rem;
         }
         .user-name img{
           padding-right: 1rem;
+        }
+        .add-icon {
+          padding: 1rem;
         }
         .verticle-line {
           height: .6rem;

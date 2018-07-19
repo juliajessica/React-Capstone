@@ -26,7 +26,6 @@ function SignUp(){
           font-weight: bold;
           color: black;
           margin: auto;
-          padding: 2rem;
         }
         .sign-up-input {
           display:flex;

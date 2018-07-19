@@ -21,7 +21,7 @@ import { Route, Switch } from 'react-router-dom';
 class Router extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <Switch>
           <Route exact path='/' component={Login}/>
           <Route exact path='/sign-up' component={SignUp}/>
@@ -39,6 +39,12 @@ class Router extends Component {
           <Route path='/profile-edit' component={ProfileEdit}/>
           <Route component={Error404}/>
         </Switch>
+        <style jsx>{`
+          .app{
+            height: 565px;
+          }
+            `}
+        </style>
       </div>
     );
   }
