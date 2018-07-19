@@ -4,13 +4,14 @@ import bgLogin from './../assets/imgs/login-bg.svg';
 
 function Login(){
 
+
   return(
     <div className='loginStyles'>
       <h1>NURTURE</h1>
       <form>
         <div className="login-input">
           <input type="text" placeholder="USER NAME"></input>
-          <input type="text" placeholder="PASSWORD"></input>
+          <input placeholder="PASSWORD" type="password" className="password"></input>
         </div>
         <div className="login-btns">
           <Link to='/plant-search'><button type="button">SIGN IN</button></Link>
@@ -49,6 +50,10 @@ function Login(){
           border: 0px solid;
         }
         input[type=text] {
+          color: white;
+          background-color: #E18472;
+        }
+        input[type=password]{
           color: white;
           background-color: #E18472;
         }
