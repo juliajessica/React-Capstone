@@ -9,17 +9,16 @@ import { viewPlantDetails } from './../actions'
 //   let newSelectedPlant = <>
 // }
 
-const SinglePlant = ({ dispatch, name, image, description }) => {
-  console.log(name);
-    const viewSinglePlant = null;
-
+const SinglePlant = ({ dispatch, name, image, description, id }) => {
+  console.log(id);
+  const viewSinglePlant = null;
   return(
     <div>
-     <div className="single-plant-flex">
-       <div className="plant-list-img">
-         <img src={image} alt="image of plant" className="image-resize" />
-       </div>
-       <h2><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{name}</h2>
+     <div className="single-plant-flex" key={id}>
+      <div className="plant-list-img">
+        <img src={image} alt="image of plant" className="image-resize" />
+      </div>
+      <h2><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{name}</h2>
       </div>
       <style jsx>{`
         .plant-list-img {
@@ -48,7 +47,6 @@ const SinglePlant = ({ dispatch, name, image, description }) => {
 SinglePlant.propTypes = {
   dispatch: PropTypes.func,
   image: PropTypes.string,
-  key: PropTypes.string,
   id: PropTypes.string,
 };
 

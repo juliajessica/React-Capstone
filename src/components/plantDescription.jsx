@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 // //     bloom={plant.bloom}
 // //     key={plantId}
 // //     id={plantId}
-function plantDescription(props){
+function PlantDescription(props){
 
   return(
     <div>
@@ -25,9 +25,9 @@ function plantDescription(props){
 }
 
 
-plantDescription.propTypes = {
+PlantDescription.propTypes = {
   selectedPlant: PropTypes.object,
-  //dispatch: PropTypes.func,
+  dispatch: PropTypes.func,
   image: PropTypes.string,
   name: PropTypes.string,
   description: PropTypes.string,
@@ -40,4 +40,4 @@ plantDescription.propTypes = {
   id: PropTypes.string,
 };
 
-export default plantDescription;
+export default PlantDescription;

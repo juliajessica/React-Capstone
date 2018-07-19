@@ -4,6 +4,7 @@ import Login from './Login.jsx';
 import SignUp from './SignUp.jsx';
 import PasswordReset from './PasswordReset';
 import PlantSearch from './PlantSearch';
+import SinglePlant from './SinglePlant';
 import PlantDescription from './PlantDescription';
 import Calendar from './Calendar';
 import CalendarAdd from './CalendarAdd';
@@ -30,6 +31,7 @@ class Router extends Component {
           <Route path='/calendar-add' component={CalendarAdd}/>
           <Route path='/calendar-today' component={CalendarToday}/>
           <Route path='/plant-search' component={PlantSearch}/>
+          <Route path='/plant' component={SinglePlant}/>
           <Route path='/plant-detail' component={PlantDescription}/>
           <Route path='/garden' component={Garden}/>
           <Route path='/garden-edit' component={GardenEdit}/>
