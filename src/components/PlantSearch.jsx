@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 //import plantData from './../constants/InitialState';
-import PlantList from './PlantList';
+import SinglePlant from './SinglePlant';
 
 function PlantSearch(props) {
   //const {name, image} = allPlantData;
@@ -53,7 +53,7 @@ function PlantSearch(props) {
                 {Object.keys(props.plantData).map(function(plantId){
                  let plant = props.plantData[plantId];
 
-                   return <PlantList
+                   return <SinglePlant
                     name={plant.name}
                     image={plant.image}
                     description={plant.description}

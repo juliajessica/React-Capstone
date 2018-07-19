@@ -9,26 +9,13 @@ import { viewPlantDetails } from './../actions'
 //   let newSelectedPlant = <>
 // }
 
-const PlantList = ({ dispatch, name, image, description }) => {
+const SinglePlant = ({ dispatch, name, image, description }) => {
   console.log(name);
-
-    // const { image, name, id } = plantData;
     const viewSinglePlant = null;
-  // const selectedPlant = plantData[id];
-  // console.log(selectedPlant);
-//  if (props.plantData.selectedPlant)
-//  if (song)
-//
-//     if (viewSinglePlant != null){
-//       dispatch(viewPlantDetails(id));
-//     }<h2 className="plant-name"><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{name}</h2>
-//   }}>
-  // {selectedPlant}
-    // <img src={image} alt="image of plant" className="image-resize" />
-    //   <h2 className="plant-name"><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{name}</h2>
+
   return(
     <div>
-     <div className="single-plant-flex"></div>
+     <div className="single-plant-flex">
        <div className="plant-list-img">
          <img src={image} alt="image of plant" className="image-resize" />
        </div>
@@ -58,7 +45,7 @@ const PlantList = ({ dispatch, name, image, description }) => {
 };
 
 
-PlantList.propTypes = {
+SinglePlant.propTypes = {
   dispatch: PropTypes.func,
   image: PropTypes.string,
   key: PropTypes.string,
@@ -72,4 +59,4 @@ PlantList.propTypes = {
 //   };
 // };
 
-export default connect()(PlantList);
+export default connect()(SinglePlant);
