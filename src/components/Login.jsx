@@ -14,8 +14,8 @@ function Login(){
           <input placeholder="PASSWORD" type="password" className="password"></input>
         </div>
         <div className="login-btns">
-          <Link to='/plant-search'><button type="button">SIGN IN</button></Link>
-          <button type="button">SIGN UP</button>
+          <Link to='/plant-search'><button type="button" className="sign-in-btn">SIGN IN</button></Link>
+          <Link to='/sign-up'><button type="button" className="sign-up-btn">SIGN UP</button></Link>
         </div>
       </form>
       <p className="login-text">Forgot your logins? Click Here!</p>
@@ -69,7 +69,7 @@ function Login(){
           flex-direction: column;
           align-items: center;
         }
-        .loginStyles button:nth-child(1) {
+        .sign-in-btn {
           color: white;
           width: 15rem;
           background-color:#DB9121;
@@ -78,7 +78,7 @@ function Login(){
           margin: .3rem 0;
           border: 0px solid;
         }
-        .loginStyles button:nth-child(2) {
+        .sign-up-btn {
           color: white;
           width: 15rem;
           background-color:#0A07DF;
