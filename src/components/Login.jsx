@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import bgLogin from './../assets/imgs/login-bg.svg';
+import SignInButton from './SignInButton';
 
 function Login(){
 
@@ -14,11 +15,11 @@ function Login(){
           <input placeholder="PASSWORD" type="password" className="password"></input>
         </div>
         <div className="login-btns">
-          <Link to='/plant-search'><button type="button" className="sign-in-btn">SIGN IN</button></Link>
+          <SignInButton />
           <Link to='/sign-up'><button type="button" className="sign-up-btn">SIGN UP</button></Link>
         </div>
       </form>
-      <p className="login-text">Forgot your logins? Click Here!</p>
+      <Link to='/password-reset'><p className="login-text">Forgot your logins? Click Here!</p></Link>
 
       <style jsx>{`
         .loginStyles {
@@ -69,15 +70,7 @@ function Login(){
           flex-direction: column;
           align-items: center;
         }
-        .sign-in-btn {
-          color: white;
-          width: 15rem;
-          background-color:#DB9121;
-          border-radius: 5px;
-          padding: .5rem 0;
-          margin: .3rem 0;
-          border: 0px solid;
-        }
+
         .sign-up-btn {
           color: white;
           width: 15rem;

@@ -1,4 +1,5 @@
 import React from 'react';
+import SignInButton from './SignInButton';
 
 function PasswordReset(){
 
@@ -6,7 +7,7 @@ function PasswordReset(){
     <div>
       <div className="password-reset">
         <h3>Password Reset</h3>
-        <button>Sign In</button>
+        <SignInButton />
 
       </div>
       <style jsx>{`
