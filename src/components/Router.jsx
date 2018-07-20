@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Error404 from './Error404';
 import Login from './Login.jsx';
 import SignUp from './SignUp.jsx';
@@ -15,8 +16,8 @@ import GardenEdit from './GardenEdit';
 import Profile from './Profile';
 import ProfileEdit from './ProfileEdit';
 
+
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
 
 class Router extends Component {
   render() {
@@ -24,8 +25,8 @@ class Router extends Component {
       <div className="app">
         <Switch>
           <Route exact path='/' component={Login}/>
-          <Route exact path='/sign-up' component={SignUp}/>
-          <Route exact path='/password-reset' component={PasswordReset}/>
+          <Route path='/sign-up' component={SignUp}/>
+          <Route path='/password-reset' component={PasswordReset}/>
           <Route path='/calendar' component={Calendar}/>
           <Route path='/calendar-edit' component={CalendarEdit}/>
           <Route path='/calendar-add' component={CalendarAdd}/>
@@ -42,6 +43,9 @@ class Router extends Component {
         <style jsx>{`
           .app{
             height: 565px;
+          }
+          a:link {
+            text-decoration: none;
           }
             `}
         </style>

@@ -4,8 +4,6 @@ import bgLogin from './../assets/imgs/login-bg.svg';
 import SignInButton from './SignInButton';
 
 function Login(){
-
-
   return(
     <div className='loginStyles'>
       <h1>NURTURE</h1>
@@ -58,7 +56,6 @@ function Login(){
           color: white;
           background-color: #E18472;
         }
-
         .login-text {
           text-align: center;
           color: white;
@@ -70,7 +67,6 @@ function Login(){
           flex-direction: column;
           align-items: center;
         }
-
         .sign-up-btn {
           color: white;
           width: 15rem;
@@ -81,7 +77,6 @@ function Login(){
           margin: .3rem 0;
           opacity: .8;
         }
-
       `}</style>
     </div>
   );
