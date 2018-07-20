@@ -28,7 +28,6 @@ function PasswordReset(){
           display:flex;
           flex-direction: column;
           align-items: center;
-          
         }
         .password-reset-input input{
           padding: .7rem;
