@@ -57,6 +57,8 @@ function PlantSearchContainer(props) {
               <div className="singlePlant">
                 {Object.keys(props.plantData).map(function(plantId){
                   let plant = props.plantData[plantId];
+                  let plantToView = props.selectedPlant;
+                   console.log(plantToView);
                    return <SinglePlant
                     name={plant.name}
                     image={plant.image}
@@ -112,6 +114,7 @@ function PlantSearchContainer(props) {
 
 PlantSearchContainer.propTypes = {
   plantData: PropTypes.object,
+  selectedPlant: PropTypes.object,
   image: PropTypes.string,
   name: PropTypes.string,
   description: PropTypes.string,

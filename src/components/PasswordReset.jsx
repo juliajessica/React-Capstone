@@ -1,5 +1,4 @@
 import React from 'react';
-import SignInButton from './SignInButton';
 import { Link } from 'react-router-dom';
 
 function PasswordReset(){
