@@ -35,7 +35,7 @@ function Profile(){
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
-          height: 560px;
+          height: 630px;
           width: 100%;
         }
         .profile-Img {
@@ -54,10 +54,8 @@ function Profile(){
         }
         .wrench-icon {
           position: absolute;
-          top: 4.5rem;
+          top: 5.2rem;
           left: 22.8rem;
-
-
         }
       `}
       </style>
