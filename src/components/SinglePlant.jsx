@@ -12,7 +12,6 @@ import { bindActionCreators } from 'redux';
 
 const SinglePlant = ({ dispatch, name, image, description, id, plant}) => {
   console.log(plant);
-
   //const viewSinglePlant = null;
   return(
     <div>

@@ -53,10 +53,10 @@ function PlantSearchContainer(props) {
         <h3>Plant Search</h3>
           <form>
             <input type="text" placeholder="SEARCH:" className="search-input"></input>
+
               <div className="singlePlant">
                 {Object.keys(props.plantData).map(function(plantId){
                   let plant = props.plantData[plantId];
-
                    return <SinglePlant
                     name={plant.name}
                     image={plant.image}
@@ -70,10 +70,9 @@ function PlantSearchContainer(props) {
                     id={plantId}
                     plant={plant}
                     />;
-
                 })}
-
               </div>
+
           </form>
       </div>
 
