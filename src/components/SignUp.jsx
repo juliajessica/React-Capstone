@@ -1,5 +1,5 @@
 import React from 'react';
-import PlantSearchContainer from './PlantSearchContainer';
+// import PlantSearchContainer from './PlantSearchContainer';
 import { Link } from 'react-router-dom';
 function SignUp(){
 

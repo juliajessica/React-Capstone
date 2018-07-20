@@ -3,23 +3,23 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import plantSVG from './../assets/imgs/pagelines.svg';
 
-import { viewPlantDetails } from './../actions';
-import { bindActionCreators } from 'redux';
+//import { viewPlantDetails } from './../actions';
+//import { bindActionCreators } from 'redux';
 
 // if (state.selectedPlant != null){
 //   let newSelectedPlant = <>
 // }
+//onClick={() => this.props.viewPlantDetails(plant)
 
-const SinglePlant = ({ dispatch, name, image, description, id, plant}) => {
-  console.log(plant);
+const SinglePlant = ({ dispatch, name, image, description, id}) => {
+  //console.log(plant);
   //const viewSinglePlant = null;
   return(
     <div>
      <div
-       className="single-plant-flex"
-       key={id}
-       onClick={() => this.props.viewPlantDetails(plant)}
-       >
+      className="single-plant-flex"
+      key={id}
+      >
       <div className="plant-list-img">
         <img src={image} alt="image of plant" className="image-resize" />
       </div>
@@ -54,12 +54,9 @@ SinglePlant.propTypes = {
   dispatch: PropTypes.func,
   image: PropTypes.string,
   id: PropTypes.string,
-  plant: PropTypes.object
 };
 
-function mapDispatchToProps(dispatch){
-  return bindActionCreators({ viewPlantDetails: viewPlantDetails }, dispatch)
-}
+
 
 
 // const mapStateToProps = state.selectedPlant => {
@@ -69,4 +66,4 @@ function mapDispatchToProps(dispatch){
 //   };
 // };
 
-export default connect(mapDispatchToProps)(SinglePlant);
+export default connect()(SinglePlant);

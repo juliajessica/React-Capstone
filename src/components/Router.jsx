@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Error404 from './Error404';
 import Login from './Login.jsx';
 import SignUp from './SignUp.jsx';
