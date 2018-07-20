@@ -8,6 +8,8 @@ function PasswordReset(){
     <div>
       <div className="password-reset">
         <h3>Password Reset</h3>
+        <br/>
+        <p>Enter your email address and we will send you a confirmation to reset your password.</p>
         <div className="password-reset-input">
           <input type="text" placeholder="EMAIL"></input>
           <Link to=''><button type="button" className="reset-button">RESET PASSWORD</button></Link>
@@ -18,11 +20,15 @@ function PasswordReset(){
         .password-reset {
           height: 565px;
         }
+        .password-reset p{
+          text-align: center;
+          padding: 0 1rem;
+        }
         .password-reset-input {
           display:flex;
           flex-direction: column;
           align-items: center;
-          padding: 2rem;
+          
         }
         .password-reset-input input{
           padding: .7rem;
