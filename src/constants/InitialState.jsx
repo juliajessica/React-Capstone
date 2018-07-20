@@ -187,6 +187,7 @@ const plantData = {
 export const initialState = {
   plantData: plantData,  // - all of state
   selectedPlant: null,  //one plant by id
+  date: new Date(),
 };
 
 export default plantData;

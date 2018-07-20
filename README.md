@@ -69,6 +69,7 @@ _Feel free to email me at [juliajessicasher@gmail.com](mailto:juliajessicasher@g
 | Webpack, Babel |
 | CSS(Sass) & Bootstrap |
 | JavaScript (JQuery) |
+| React-Calendar | 
 
 
 ### <span style="color:#74875d;">License</span>

@@ -147,7 +147,8 @@ PlantSearchContainer.propTypes = {
 const mapStateToProps = state => {
   return {
     plantData: state.plantData,
-    selectedPlant: state.selectedPlant
+    selectedPlant: state.selectedPlant,
+    date: new Date(),
   };
 };
 
