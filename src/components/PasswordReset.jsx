@@ -6,6 +6,7 @@ function PasswordReset(){
     <div>
       <div className="password-reset">
         <h3>Password Reset</h3>
+        <button>Sign In</button>
 
       </div>
       <style jsx>{`
