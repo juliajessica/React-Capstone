@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import plantSVG from './../assets/imgs/pagelines.svg';
-import c from './../constants';
+// import c from './../constants';
 //import { viewPlantDetails } from './../actions';
 
 const SinglePlant = ({ dispatch, name, image, description, id }) => {
@@ -18,7 +18,6 @@ const SinglePlant = ({ dispatch, name, image, description, id }) => {
     //console.log(action);
   }
   //console.log(id);
-
 
   return(
     <div>
@@ -61,7 +60,7 @@ const SinglePlant = ({ dispatch, name, image, description, id }) => {
 SinglePlant.propTypes = {
   plantData: PropTypes.object,
   dispatch: PropTypes.func,
-  selectedPlant: PropTypes.string,
+  selectedPlant: PropTypes.object,
   image: PropTypes.string,
   id: PropTypes.string,
 };

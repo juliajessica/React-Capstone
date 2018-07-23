@@ -4,17 +4,17 @@ import PropTypes from 'prop-types';
 import SinglePlant from './SinglePlant';
 import SinglePlantDescription from './SinglePlantDescription';
 //import { viewPlantDetails } from './../actions';
-import c from './../constants';
+// import c from './../constants';
 
 //need to change this into a classbased component
 function PlantSearchContainer(props) {
-  // let viewSinglePlant = null;
-  //
-  // if (props.selectedPlant > 0){
-  //   viewSinglePlant = <SinglePlantDescription selectedPlant={props.plantData[props.selectedPlant]} />;
-  // }
-
-
+  let viewSinglePlant = null;
+  console.log(props.selectedPlant);
+  //console.log(props.plantData.id);
+  if (props.selectedPlant){
+    viewSinglePlant = <SinglePlantDescription selectedPlant={props.plantData[props.selectedPlant]} />;
+  }
+  console.log(viewSinglePlant);
 
 //THIS IS WHAT I NEED TO DO!!!!
 // if selectedPlant (referrring to props being mapped at bottom of file) is equal to the plantID from loop, render additional viewPlantDetails
@@ -49,34 +49,14 @@ function PlantSearchContainer(props) {
 //       {clickedPlant}
 //     </div>
 //   );
-// } else {
-//   clickedPlant = <SinglePlantDescription
-//     name={plant.name}
-//     image={plant.image}
-//     description={plant.description}
-//     maintenance={plant.maintenance}
-//     water={plant.water}
-//     exposure={plant.exposure}
-//     growthPeriod={plant.growthPeriod}
-//     bloom={plant.bloom}
-//     key={plantId}
-//     id={plantId}
-//     plant={plant} />;
-//   return (
-//     <div>
-//       <h1>these are all the plants</h1>
-//       {clickedPlant}
-//     </div>
-//   );
-// }
 
-// <div>{viewSinglePlant}</div>
+
   return(
     <div>
       <div className="plant-Search">
         <h3>Plant Search</h3>
           <form>
-
+            <div>{viewSinglePlant}</div>
             <input type="text" placeholder="SEARCH:" className="search-input"></input>
               <div className="singlePlant">
                 {Object.keys(props.plantData).map(function(plantId){
@@ -131,7 +111,7 @@ function PlantSearchContainer(props) {
 
 PlantSearchContainer.propTypes = {
   plantData: PropTypes.object,
-  selectedPlant: PropTypes.string,
+  selectedPlant: PropTypes.object,
   image: PropTypes.string,
   name: PropTypes.string,
   description: PropTypes.string,
@@ -143,7 +123,6 @@ PlantSearchContainer.propTypes = {
   key: PropTypes.string,
   id: PropTypes.string,
 };
-
 
 const mapStateToProps = state => {
   return {
