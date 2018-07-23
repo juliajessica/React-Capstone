@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import plantSVG from './../assets/imgs/pagelines.svg';
+import c from './../constants';
 
 
 //
@@ -16,8 +17,18 @@ import plantSVG from './../assets/imgs/pagelines.svg';
 // //     id={plantId}
 function PlantDescription(props){
 
+  function handleClickedPlant(plantId){
+    const { dispatch } = props;
+    const action ={
+      type: c.SELECT_PLANT,
+      plantId: plantId
+    };
+    dispatch(action);
+  }
+
+
   return(
-    <div>
+    <div key={props.key}>
       <h1>plant description</h1>
       <h2><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{props.name}</h2>
       <div className="plant-desc-img">

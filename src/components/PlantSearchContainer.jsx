@@ -1,26 +1,28 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-//import plantData from './../constants/InitialState';
 import SinglePlant from './SinglePlant';
 import PlantDescription from './PlantDescription';
-
-import { bindActionCreators } from 'redux';
-import { viewPlantDetails } from './../actions';
+//import { viewPlantDetails } from './../actions';
 import c from './../constants';
 
 //need to change this into a classbased component
 function PlantSearchContainer(props) {
+  let clickedPlant = null;
 
-
-  function clickedPlant(plantId){
-    const { dispatch } = props;
-    const action ={
-      type: c.SELECT_PLANT,
-      plantId: plantId
-    };
-    dispatch(action);
+  if (props.clickedPlant !=null){
+    clickedPlant = <SinglePlant
+      selectedPlant = {props.plantData[props.selectedPlant]}/>;
   }
+
+  // function handleClickedPlant(plantId){
+  //   const { dispatch } = props;
+  //   const action ={
+  //     type: c.SELECT_PLANT,
+  //     plantId: plantId
+  //   };
+  //   dispatch(action);
+  // }
 
 // const selectedPlant = plantData[id];
 
@@ -88,38 +90,23 @@ function PlantSearchContainer(props) {
     <div>
       <div className="plant-Search">
         <h3>Plant Search</h3>
+          {clickedPlant}
           <form>
             <input type="text" placeholder="SEARCH:" className="search-input"></input>
               <div className="singlePlant">
                 {Object.keys(props.plantData).map(function(plantId){
                   let plant = props.plantData[plantId]; //single plant
-                  //console.log(plant);
-                  // let clickedPlant = null;
-                  if (plant ) {
-                    return <SinglePlant
+                  console.log(plant);
+                  return (
+                    <SinglePlant
+                      selectedPlant = {props.plantData[props.selectedPlant]}
                       name={plant.name}
                       image={plant.image}
                       key={plantId}
                       id={plantId}
-                      plant={plant}
-                      onClick={() => plant.viewPlantDetails(plant)}
-                      />
-                  } else {
-                    return <PlantDescription
-                      name={plant.name}
-                      image={plant.image}
-                      description={plant.description}
-                      maintenance={plant.maintenance}
-                      water={plant.water}
-                      exposure={plant.exposure}
-                      growthPeriod={plant.growthPeriod}
-                      bloom={plant.bloom}
-                      key={plantId}
-                      id={plantId}
-                      plant={plant}
-                      onClick={() => plant.viewPlantDetails(plant)}
-                    />
-                  }
+                      plant={plant} />
+                  );
+
                 })}
               </div>
 
@@ -175,9 +162,7 @@ PlantSearchContainer.propTypes = {
   id: PropTypes.string,
 };
 
-//console.log(plantData);
 
-//same as function mapStateToProps(state)
 const mapStateToProps = state => {
   return {
     plantData: state.plantData,
@@ -186,10 +171,4 @@ const mapStateToProps = state => {
   };
 };
 
-// function mapDispatchToProps(dispatch){
-//   return bindActionCreators({ viewPlantDetails: viewPlantDetails }, dispatch)
-// }
-
 export default connect(mapStateToProps)(PlantSearchContainer);
-
-//<PlantDescription />
