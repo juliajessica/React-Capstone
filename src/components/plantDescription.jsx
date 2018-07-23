@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import plantSVG from './../assets/imgs/pagelines.svg';
 
 
 //
@@ -18,8 +19,24 @@ function PlantDescription(props){
   return(
     <div>
       <h1>plant description</h1>
-      <p>{props.selectedPlant.name}</p>
+      <h2><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{props.name}</h2>
+      <div className="plant-desc-img">
+        <img src={props.image} alt="image of plant" className="plant-desc-imgResize" />
+      </div>
+      <style jsx>{`
+        .plant-desc-img {
+          display: block;
+          overflow: hidden;
+          height: 100px;
+          width: 100px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .plant-desc-imgResize {
+          width: 120px;
+        }
 
+        `}
+      </style>
     </div>
   );
 }

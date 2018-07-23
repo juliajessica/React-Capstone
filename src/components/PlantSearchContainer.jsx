@@ -7,29 +7,23 @@ import PlantDescription from './PlantDescription';
 
 import { bindActionCreators } from 'redux';
 import { viewPlantDetails } from './../actions';
+import c from './../constants';
 
 //need to change this into a classbased component
 function PlantSearchContainer(props) {
 
-  //const {name, image} = allPlantData;
-  //console.log(state.plantData);
 
-
-//console.log(plant);
-
+  function clickedPlant(plantId){
+    const { dispatch } = props;
+    const action ={
+      type: c.SELECT_PLANT,
+      plantId: plantId
+    };
+    dispatch(action);
+  }
 
 // const selectedPlant = plantData[id];
-// console.log(selectedPlant);
-//  if (props.plantData.selectedPlant)
-//  if (song)
-//
-//     if (viewSinglePlant != null){
-//       dispatch(viewPlantDetails(id));
-//     }<h2 className="plant-name"><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{name}</h2>
-//   }}>
-// {selectedPlant}
-  // <img src={image} alt="image of plant" className="image-resize" />
-  //   <h2 className="plant-name"><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{name}</h2>
+
 
 
 //THIS IS WHAT I NEED TO DO!!!!
@@ -47,7 +41,8 @@ function PlantSearchContainer(props) {
 //    key={plantId}
 //    id={plantId}
 //    />;
-  // console.log(plant);
+  //onClick={() => plant.viewPlantDetails(plant)
+
   return(
     <div>
       <div className="plant-Search">
@@ -56,22 +51,28 @@ function PlantSearchContainer(props) {
             <input type="text" placeholder="SEARCH:" className="search-input"></input>
               <div className="singlePlant">
                 {Object.keys(props.plantData).map(function(plantId){
-                  let plant = props.plantData[plantId];
-                  let plantToView = props.selectedPlant;
-                  plantToView === plant;
-                   console.log(plantToView);
-                   console.log(plant);
-                  if (plant ) {
-                    return <SinglePlant
+                  let plant = props.plantData[plantId]; //single plant
+                  console.log(plant);
+                  let clickedPlant = null;
+
+                  if (props.selectedPlant === props.plantData.id) {
+                    clickedPlant = <SinglePlant
+                      selectedPlant = {props.plantData[props.selectedPlant]}
                       name={plant.name}
                       image={plant.image}
                       key={plantId}
                       id={plantId}
                       plant={plant}
-                      onClick={() => plant.viewPlantDetails(plant)}
-                      />
+                      />;
+                      console.log(clickedPlant);
+                    return (
+                      <div>
+                        <h1>this is the selected ticket</h1>
+                        {clickedPlant}
+                      </div>
+                    );
                   } else {
-                    return <PlantDescription
+                    clickedPlant = <PlantDescription
                       name={plant.name}
                       image={plant.image}
                       description={plant.description}
@@ -83,8 +84,13 @@ function PlantSearchContainer(props) {
                       key={plantId}
                       id={plantId}
                       plant={plant}
-                      onClick={() => plant.viewPlantDetails(plant)}
-                    />
+                      />;
+                    return (
+                      <div>
+                        <h1>these are all the plants</h1>
+                        {clickedPlant}
+                      </div>
+                    );
                   }
                 })}
               </div>

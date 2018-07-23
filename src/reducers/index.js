@@ -1,4 +1,3 @@
-
 import plantSelectedReducer from './plantSelectedReducer';
 import { combineReducers } from 'redux';
 
