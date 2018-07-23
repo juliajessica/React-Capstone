@@ -1,1 +1,1 @@
-export const SELECT_PLANT = 'SELECT_PLANT';
+export const SELECT_PLANT = "SELECT_PLANT";

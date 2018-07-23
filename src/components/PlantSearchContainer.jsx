@@ -2,29 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import SinglePlant from './SinglePlant';
-import PlantDescription from './PlantDescription';
+import SinglePlantDescription from './SinglePlantDescription';
 //import { viewPlantDetails } from './../actions';
 import c from './../constants';
 
 //need to change this into a classbased component
 function PlantSearchContainer(props) {
-  let clickedPlant = null;
-
-  if (props.clickedPlant !=null){
-    clickedPlant = <SinglePlant
-      selectedPlant = {props.plantData[props.selectedPlant]}/>;
-  }
-
-  // function handleClickedPlant(plantId){
-  //   const { dispatch } = props;
-  //   const action ={
-  //     type: c.SELECT_PLANT,
-  //     plantId: plantId
-  //   };
-  //   dispatch(action);
+  // let viewSinglePlant = null;
+  //
+  // if (props.selectedPlant > 0){
+  //   viewSinglePlant = <SinglePlantDescription selectedPlant={props.plantData[props.selectedPlant]} />;
   // }
-
-// const selectedPlant = plantData[id];
 
 
 
@@ -45,20 +33,15 @@ function PlantSearchContainer(props) {
 //    />;
 
 
-
-
-
-// let clickedPlant = null;
-//
 // if (props.selectedPlant === props.plantData.id) {
 //   //console.log(props.selectedPlant);
 //   clickedPlant = <SinglePlant
 //     selectedPlant = {props.plantData[props.selectedPlant]}
-//     name={plant.name}
-//     image={plant.image}
+//     name={singlePlant.name}
+//     image={singlePlant.image}
 //     key={plantId}
 //     id={plantId}
-//     plant={plant} />;
+//     plant={singlePlant} />;
 //   console.log(clickedPlant);
 //   return (
 //     <div>
@@ -67,7 +50,7 @@ function PlantSearchContainer(props) {
 //     </div>
 //   );
 // } else {
-//   clickedPlant = <PlantDescription
+//   clickedPlant = <SinglePlantDescription
 //     name={plant.name}
 //     image={plant.image}
 //     description={plant.description}
@@ -86,33 +69,32 @@ function PlantSearchContainer(props) {
 //     </div>
 //   );
 // }
+
+// <div>{viewSinglePlant}</div>
   return(
     <div>
       <div className="plant-Search">
         <h3>Plant Search</h3>
-          {clickedPlant}
           <form>
+
             <input type="text" placeholder="SEARCH:" className="search-input"></input>
               <div className="singlePlant">
                 {Object.keys(props.plantData).map(function(plantId){
-                  let plant = props.plantData[plantId]; //single plant
-                  console.log(plant);
+                  let singlePlant = props.plantData[plantId]; //single plant
+                  //console.log(singlePlant);
                   return (
                     <SinglePlant
-                      selectedPlant = {props.plantData[props.selectedPlant]}
-                      name={plant.name}
-                      image={plant.image}
+                      name={singlePlant.name}
+                      image={singlePlant.image}
                       key={plantId}
                       id={plantId}
-                      plant={plant} />
+                      plant={singlePlant} />
                   );
-
+                  console.log(singlePlant);
                 })}
               </div>
-
           </form>
       </div>
-
 
       <style jsx>{`
         .plant-Search{
@@ -149,7 +131,7 @@ function PlantSearchContainer(props) {
 
 PlantSearchContainer.propTypes = {
   plantData: PropTypes.object,
-  selectedPlant: PropTypes.object,
+  selectedPlant: PropTypes.string,
   image: PropTypes.string,
   name: PropTypes.string,
   description: PropTypes.string,
