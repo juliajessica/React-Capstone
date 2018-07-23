@@ -41,8 +41,49 @@ function PlantSearchContainer(props) {
 //    key={plantId}
 //    id={plantId}
 //    />;
-  //onClick={() => plant.viewPlantDetails(plant)
 
+
+
+
+
+// let clickedPlant = null;
+//
+// if (props.selectedPlant === props.plantData.id) {
+//   //console.log(props.selectedPlant);
+//   clickedPlant = <SinglePlant
+//     selectedPlant = {props.plantData[props.selectedPlant]}
+//     name={plant.name}
+//     image={plant.image}
+//     key={plantId}
+//     id={plantId}
+//     plant={plant} />;
+//   console.log(clickedPlant);
+//   return (
+//     <div>
+//       <h1>this is the selected ticket</h1>
+//       {clickedPlant}
+//     </div>
+//   );
+// } else {
+//   clickedPlant = <PlantDescription
+//     name={plant.name}
+//     image={plant.image}
+//     description={plant.description}
+//     maintenance={plant.maintenance}
+//     water={plant.water}
+//     exposure={plant.exposure}
+//     growthPeriod={plant.growthPeriod}
+//     bloom={plant.bloom}
+//     key={plantId}
+//     id={plantId}
+//     plant={plant} />;
+//   return (
+//     <div>
+//       <h1>these are all the plants</h1>
+//       {clickedPlant}
+//     </div>
+//   );
+// }
   return(
     <div>
       <div className="plant-Search">
@@ -52,27 +93,19 @@ function PlantSearchContainer(props) {
               <div className="singlePlant">
                 {Object.keys(props.plantData).map(function(plantId){
                   let plant = props.plantData[plantId]; //single plant
-                  console.log(plant);
-                  let clickedPlant = null;
-
-                  if (props.selectedPlant === props.plantData.id) {
-                    clickedPlant = <SinglePlant
-                      selectedPlant = {props.plantData[props.selectedPlant]}
+                  //console.log(plant);
+                  // let clickedPlant = null;
+                  if (plant ) {
+                    return <SinglePlant
                       name={plant.name}
                       image={plant.image}
                       key={plantId}
                       id={plantId}
                       plant={plant}
-                      />;
-                      console.log(clickedPlant);
-                    return (
-                      <div>
-                        <h1>this is the selected ticket</h1>
-                        {clickedPlant}
-                      </div>
-                    );
+                      onClick={() => plant.viewPlantDetails(plant)}
+                      />
                   } else {
-                    clickedPlant = <PlantDescription
+                    return <PlantDescription
                       name={plant.name}
                       image={plant.image}
                       description={plant.description}
@@ -84,13 +117,8 @@ function PlantSearchContainer(props) {
                       key={plantId}
                       id={plantId}
                       plant={plant}
-                      />;
-                    return (
-                      <div>
-                        <h1>these are all the plants</h1>
-                        {clickedPlant}
-                      </div>
-                    );
+                      onClick={() => plant.viewPlantDetails(plant)}
+                    />
                   }
                 })}
               </div>
@@ -158,10 +186,10 @@ const mapStateToProps = state => {
   };
 };
 
-function mapDispatchToProps(dispatch){
-  return bindActionCreators({ viewPlantDetails: viewPlantDetails }, dispatch)
-}
+// function mapDispatchToProps(dispatch){
+//   return bindActionCreators({ viewPlantDetails: viewPlantDetails }, dispatch)
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PlantSearchContainer);
+export default connect(mapStateToProps)(PlantSearchContainer);
 
 //<PlantDescription />

@@ -16,16 +16,16 @@ const SinglePlant = ({ dispatch, name, image, description, id}) => {
   //const viewSinglePlant = null;
   return(
     <div>
-     <div
-      className="single-plant-flex"
-      key={id}
-      >
-      <div className="plant-list-img">
-        <img src={image} alt="image of plant" className="image-resize" />
-      </div>
-      <h2><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{name}</h2>
-      {this.renderSinglePlant}
-      </div>
+      <div
+        className="single-plant-flex"
+        key={id} >
+
+        <div className="plant-list-img">
+          <img src={image} alt="image of plant" className="image-resize" />
+        </div>
+
+       <h2><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{name}</h2>
+     </div>
       <style jsx>{`
         .plant-list-img {
           display: block;
@@ -45,13 +45,14 @@ const SinglePlant = ({ dispatch, name, image, description, id}) => {
         }
           `}
       </style>
-    </div>
+  </div>
   );
 };
 
 
 SinglePlant.propTypes = {
   dispatch: PropTypes.func,
+  selectedPlant: PropTypes.object,
   image: PropTypes.string,
   id: PropTypes.string,
 };
