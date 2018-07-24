@@ -1,9 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import plantSVG from './../assets/imgs/pagelines.svg';
+import Modal from 'react-modal';
+import { connect } from 'react-redux';
 
 function SinglePlantDescription(props){
-  console.log(props.description);
+
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)'
+    }
+  };
+  function handleModalOpen(){
+    const { dispatch } = props;
+    const action = {
+      type: 'MODAL_DISPLAY_PLANT',
+      modalIsOpen: true
+    };
+    dispatch(action);
+    console.log(action);
+  }
+
+  function handleModalClose(){
+    const { dispatch } = props;
+    const action = {
+      type: 'MODAL_DISPLAY_PLANT',
+      modalIsOpen: false
+    };
+    dispatch(action);
+    console.log(action);
+  }
 
   return(
     <div>
@@ -19,7 +49,16 @@ function SinglePlantDescription(props){
       <p><span className="plant-properties">Exposure:</span> {props.exposure}</p>
       <p><span className="plant-properties">Growth Period:</span> {props.growthPeriod}</p>
       <p><span className="plant-properties">Bloom:</span> {props.bloom}</p>
-      <button>ADD TO GARDEN</button>
+      <button
+        onClick={handleModalOpen}
+      >ADD TO GARDEN</button>
+      <Modal
+        style={customStyles}
+        isOpen={props.modalIsOpen}>
+        <h1>Hi, im a modal</h1>
+        <button>close me</button>
+      </Modal>
+
 
       <style jsx>{`
         .flex-plant {
@@ -59,7 +98,17 @@ function SinglePlantDescription(props){
 
 
 SinglePlantDescription.propTypes = {
-  selectedPlant: PropTypes.object
+  selectedPlant: PropTypes.object,
+  modalIsOpen: PropTypes.bool,
+  dispatch: PropTypes.func,
 };
 
-export default SinglePlantDescription;
+
+const mapStateToProps = state => {
+  return {
+    plantData: state.plantData,
+    modalIsOpen: state.modalIsOpen
+  };
+};
+
+export default connect(mapStateToProps)(SinglePlantDescription);

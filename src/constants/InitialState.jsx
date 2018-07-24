@@ -18,6 +18,7 @@ import plantSVG from './../assets/imgs/pagelines.svg';
 export const initialState = {
   selectedPlant: null,
   date: new Date(),
+  modalIsOpen: false,
   plantData: {
     1: {
     name: "African Daisy",

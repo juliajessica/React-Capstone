@@ -29,8 +29,8 @@ function SinglePlant(props){
     />;
   }
 
-  console.log('this is the plant ID' +  props.id);
-  console.log('this is the selected plant' + props.selectedPlant);
+  //console.log('this is the plant ID' +  props.id);
+  //console.log('this is the selected plant' + props.selectedPlant);
 
   function handleClickedPlant(id){
     const { dispatch } = props;
