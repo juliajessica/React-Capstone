@@ -5,35 +5,53 @@ import { connect } from 'react-redux';
 
 function SinglePlantDescription(props){
 
-  const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)'
-    }
-  };
-  function handleModalOpen(){
-    const { dispatch } = props;
-    const action = {
-      type: 'MODAL_DISPLAY_PLANT',
-      modalIsOpen: true
-    };
-    dispatch(action);
-    console.log(action);
-  }
-
+  // const customStyles = {
+  //   content: {
+  //     top: '50%',
+  //     left: '50%',
+  //     right: 'auto',
+  //     bottom: 'auto',
+  //     marginRight: '-50%',
+  //     transform: 'translate(-50%, -50%)'
+  //   }
+  // };
+  // function handleModalOpen(){
+  //   const { dispatch } = props;
+  //   const action = {
+  //     type: 'MODAL_DISPLAY_PLANT',
+  //     modalIsOpen: true
+  //   };
+  //   dispatch(action);
+  //   console.log(action);
+  // }
+  //
   function handleModalClose(){
     const { dispatch } = props;
     const action = {
-      type: 'MODAL_DISPLAY_PLANT',
+      type: 'SELECT_PLANT',
       modalIsOpen: false
     };
     dispatch(action);
     console.log(action);
   }
+
+
+
+
+
+  // <button
+  //   onClick={handleModalOpen}>
+  //   ADD TO GARDEN
+  // </button>
+  // <Modal
+  //   style={customStyles}
+  //   isOpen={props.modalIsOpen}>
+  //   <h1>Hi, im a modal</h1>
+  //   <button
+  //     onClick={handleModalClose}>
+  //     close me
+  //   </button>
+  // </Modal>
 
   return(
     <div>
@@ -49,46 +67,44 @@ function SinglePlantDescription(props){
       <p><span className="plant-properties">Exposure:</span> {props.exposure}</p>
       <p><span className="plant-properties">Growth Period:</span> {props.growthPeriod}</p>
       <p><span className="plant-properties">Bloom:</span> {props.bloom}</p>
-      <button
-        onClick={handleModalOpen}
-      >ADD TO GARDEN</button>
-      <Modal
-        style={customStyles}
-        isOpen={props.modalIsOpen}>
-        <h1>Hi, im a modal</h1>
-        <button>close me</button>
-      </Modal>
+        <button
+          onClick={handleModalClose}>
+          close me
+        </button>
+
 
 
       <style jsx>{`
         .flex-plant {
           display: flex;
           justify-content: space-between;
-
         }
+
         .plant-name {
           border-radius: 5;
         }
+
         .plant-desc-img {
           display: block;
           overflow: hidden;
           height: 100px;
           width: 100px;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
         }
+
         .plant-desc-imgResize {
           width: 120px;
         }
+
         .plant-properties {
           font-weight: bold;
           color: #d69ea5;
         }
+
         .leaf-svg{
           padding: .2rem;
           width: 15px;
         }
-
 
         `}
       </style>
@@ -107,6 +123,7 @@ SinglePlantDescription.propTypes = {
 const mapStateToProps = state => {
   return {
     plantData: state.plantData,
+    selectedPlant: state.selectedPlant,
     modalIsOpen: state.modalIsOpen
   };
 };

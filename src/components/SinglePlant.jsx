@@ -3,11 +3,22 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import plantSVG from './../assets/imgs/pagelines.svg';
 import SinglePlantDescription from './SinglePlantDescription';
+import Modal from 'react-modal';
 // import c from './../constants';
 //import { viewPlantDetails } from './../actions';
 
 function SinglePlant(props){
-// = ({ dispatch, name, image, description, id, selectedPlant }) => {
+
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)'
+    }
+  };
   //console.log(plant);
   //console.log('this is the selected plant' + selectedPlant);
 
@@ -16,7 +27,9 @@ function SinglePlant(props){
   // //console.log(props.plantData.id);
 
   if (props.selectedPlant === props.id){
-    viewSinglePlant = <SinglePlantDescription
+    viewSinglePlant = <Modal
+      style={customStyles} isOpen={props.modalIsOpen}>
+      <SinglePlantDescription
       name={props.name}
       image={props.image}
       description={props.description}
@@ -26,7 +39,7 @@ function SinglePlant(props){
       growthPeriod={props.growthPeriod}
       bloom={props.bloom}
       id={props.id}
-    />;
+    /></Modal>;
   }
 
   //console.log('this is the plant ID' +  props.id);
@@ -36,7 +49,8 @@ function SinglePlant(props){
     const { dispatch } = props;
     const action = {
       type: 'SELECT_PLANT',
-      selectedPlant: id
+      selectedPlant: id,
+      modalIsOpen: true
     };
     dispatch(action);
     //console.log(action);
@@ -83,7 +97,7 @@ function SinglePlant(props){
 SinglePlant.propTypes = {
   plantData: PropTypes.object,
   dispatch: PropTypes.func,
-  selectedPlant: PropTypes.object,
+  selectedPlant: PropTypes.string,
   image: PropTypes.string,
   name: PropTypes.string,
   description: PropTypes.string,
@@ -93,12 +107,15 @@ SinglePlant.propTypes = {
   growthPeriod: PropTypes.string,
   bloom: PropTypes.string,
   id: PropTypes.string,
+
+  modalIsOpen: PropTypes.bool,
 };
 
 const mapStateToProps = state => {
   return {
     plantData: state.plantData,
-    selectedPlant: state.selectedPlant
+    selectedPlant: state.selectedPlant,
+    modalIsOpen: state.modalIsOpen
   };
 };
 

@@ -1,2 +1,2 @@
 export const SELECT_PLANT = "SELECT_PLANT";
-export const MODAL_DISPLAY_PLANT = "DISPLAY_PLANT";
+// export const MODAL_DISPLAY_PLANT = "DISPLAY_PLANT";
