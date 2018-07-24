@@ -14,6 +14,7 @@ function SinglePlant(props){
   let viewSinglePlant = null;
   // console.log(selectedPlant);
   // //console.log(props.plantData.id);
+
   if (props.selectedPlant === props.id){
     viewSinglePlant = <SinglePlantDescription
       name={props.name}
@@ -24,10 +25,12 @@ function SinglePlant(props){
       exposure={props.exposure}
       growthPeriod={props.growthPeriod}
       bloom={props.bloom}
+      id={props.id}
     />;
   }
-  console.log('this is the selected plantID' +  props.water);
-  console.log('this is the selected plantID' + props.selectedPlant);
+
+  console.log('this is the plant ID' +  props.id);
+  console.log('this is the selected plant' + props.selectedPlant);
 
   function handleClickedPlant(id){
     const { dispatch } = props;

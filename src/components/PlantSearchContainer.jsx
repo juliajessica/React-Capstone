@@ -23,17 +23,17 @@ function PlantSearchContainer(props) {
                     <SinglePlant
                       name={singlePlant.name}
                       image={singlePlant.image}
-                      description={props.description}
-                      maintenance={props.maintenance}
-                      water={props.water}
-                      exposure={props.exposure}
-                      growthPeriod={props.growthPeriod}
-                      bloom={props.bloom}
+                      description={singlePlant.description}
+                      maintenance={singlePlant.maintenance}
+                      water={singlePlant.water}
+                      exposure={singlePlant.exposure}
+                      growthPeriod={singlePlant.growthPeriod}
+                      bloom={singlePlant.bloom}
                       key={plantId}
                       id={plantId}
                       plant={singlePlant} />
                   );
-                  console.log(props.description);
+                  //console.log(props.description);
                 })}
               </div>
           </form>
