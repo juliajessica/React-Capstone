@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import SinglePlant from './SinglePlant';
-//import SinglePlantDescription from './SinglePlantDescription';
 //import { viewPlantDetails } from './../actions';
 
 function PlantSearchContainer(props) {
@@ -16,7 +15,7 @@ function PlantSearchContainer(props) {
             <input type="text" placeholder="SEARCH:" className="search-input"></input>
               <div className="singlePlant">
                 {Object.keys(props.plantData).map(function(plantId){
-                  let singlePlant = props.plantData[plantId]; //single plant
+                  let singlePlant = props.plantData[plantId];
                   //console.log(props.selectedPlant);
                   //console.log(singlePlant);
                   return (

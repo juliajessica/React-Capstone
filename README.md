@@ -63,7 +63,7 @@ _Feel free to email me at [juliajessicasher@gmail.com](mailto:juliajessicasher@g
 
 ## <span style="color:#74875d;">Technologies Used</span>
 
-| Libraries and Languages |
+| Libraries, Languages, and Packages |
 | :------------ |
 | React, Redux, React-Redux, JSX |
 | Webpack, Babel |

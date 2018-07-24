@@ -2,9 +2,9 @@ import React from 'react';
 import settings from './../assets/imgs/settings.svg';
 import { Link } from 'react-router-dom';
 import GardenName from './GardenName';
-//<img src={} />
+import PropTypes from 'prop-types';
 
-function Garden(){
+function Garden(props){
 
   return(
     <div>
@@ -12,7 +12,7 @@ function Garden(){
         <h3>Garden</h3>
         <GardenName/>
           <div className="plant-garden">
-            <h1>will have plant name</h1>
+            <h1>{props.name}</h1>
             <Link to='/garden-edit'><img src={settings} alt="setting icon to edit garden"/></Link>
           </div>
 
@@ -46,5 +46,21 @@ function Garden(){
     </div>
   );
 }
+
+Garden.propTypes = {
+  plantData: PropTypes.object,
+  dispatch: PropTypes.func,
+  selectedPlant: PropTypes.string,
+  name: PropTypes.string
+};
+
+const mapStateToProps = state => {
+  return {
+    plantData: state.plantData,
+    selectedPlant: state.selectedPlant,
+  //  modalIsOpen: state.modalIsOpen
+    addToGarden: state.addToGarden
+  };
+};
 
 export default Garden;

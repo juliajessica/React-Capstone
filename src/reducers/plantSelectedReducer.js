@@ -15,12 +15,14 @@ const plantSelectedReducer = (state = initialState, action) => {
     console.log(action);
     return newState;
 
-    // case 'MODAL_DISPLAY_PLANT':
-    // let newStateSlice = Object.assign({}, state, {
-    //   modalIsOpen: action.modalIsOpen,
-    // });
-    // console.log(newStateSlice);
-    // return newStateSlice;
+    case 'ADD_PLANT_TO_GARDEN':
+    let newStateSlice = Object.assign({}, state, {
+      addToGarden: action.addToGraden,
+      plantData: initialState.plantData,
+      selectedPlant: action.selectedPlant,
+    });
+    console.log(newStateSlice);
+    return newStateSlice;
   default:
     return state;
   }

@@ -2,29 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import { connect } from 'react-redux';
+import Garden from './Garden';
 
 function SinglePlantDescription(props){
+  let showNewPlantInGarden = null;
 
-  // const customStyles = {
-  //   content: {
-  //     top: '50%',
-  //     left: '50%',
-  //     right: 'auto',
-  //     bottom: 'auto',
-  //     marginRight: '-50%',
-  //     transform: 'translate(-50%, -50%)'
-  //   }
-  // };
-  // function handleModalOpen(){
-  //   const { dispatch } = props;
-  //   const action = {
-  //     type: 'MODAL_DISPLAY_PLANT',
-  //     modalIsOpen: true
-  //   };
-  //   dispatch(action);
-  //   console.log(action);
-  // }
-  //
   function handleModalClose(){
     const { dispatch } = props;
     const action = {
@@ -35,9 +17,22 @@ function SinglePlantDescription(props){
     console.log(action);
   }
 
+  function handleAddToGarden(id){
+    const { dispatch } = props;
+    const action = {
+      type: 'ADD_PLANT_TO_GARDEN',
+      selectedPlant: id,
+      modalIsOpen: true,
+      addToGarden: true
+    };
+    dispatch(action);
+    console.log(action);
+  }
 
-
-
+  if (props.addToGraden === true){
+    showNewPlantInGarden = <Garden
+      name={props.name} />;
+  }
 
   // <button
   //   onClick={handleModalOpen}>
@@ -56,6 +51,7 @@ function SinglePlantDescription(props){
   return(
     <div>
       <div className="flex-plant">
+        <div>{showNewPlantInGarden}</div>
       <h1 className="plant-name">{props.name}</h1>
         <div className="plant-desc-img">
           <img src={props.image} alt="image of plant" className="plant-desc-imgResize" />
@@ -67,6 +63,9 @@ function SinglePlantDescription(props){
       <p><span className="plant-properties">Exposure:</span> {props.exposure}</p>
       <p><span className="plant-properties">Growth Period:</span> {props.growthPeriod}</p>
       <p><span className="plant-properties">Bloom:</span> {props.bloom}</p>
+      <button
+        onClick = {() => handleAddToGarden(props.id)} >
+        ADD TO GARDEN</button>
         <button
           onClick={handleModalClose}>
           close me
@@ -114,9 +113,10 @@ function SinglePlantDescription(props){
 
 
 SinglePlantDescription.propTypes = {
+  dispatch: PropTypes.func,
   selectedPlant: PropTypes.object,
   modalIsOpen: PropTypes.bool,
-  dispatch: PropTypes.func,
+  addToGarden: PropTypes.bool
 };
 
 
@@ -124,7 +124,8 @@ const mapStateToProps = state => {
   return {
     plantData: state.plantData,
     selectedPlant: state.selectedPlant,
-    modalIsOpen: state.modalIsOpen
+    modalIsOpen: state.modalIsOpen,
+    addToGarden: state.addToGraden
   };
 };
 

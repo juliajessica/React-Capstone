@@ -19,6 +19,7 @@ export const initialState = {
   selectedPlant: null,
   date: new Date(),
   modalIsOpen: false,
+  addToGraden: false,
   plantData: {
     1: {
     name: "African Daisy",
