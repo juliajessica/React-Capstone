@@ -4,8 +4,11 @@ import { connect } from 'react-redux';
 import plantSVG from './../assets/imgs/pagelines.svg';
 import SinglePlantDescription from './SinglePlantDescription';
 import Modal from 'react-modal';
-// import c from './../constants';
+import c from './../constants';
 //import { viewPlantDetails } from './../actions';
+
+
+// Modal.setAppElement(document.getElementById('display-dom'));
 
 function SinglePlant(props){
 
@@ -24,22 +27,25 @@ function SinglePlant(props){
 
   let viewSinglePlant = null;
   // console.log(selectedPlant);
-  // //console.log(props.plantData.id);
+  // console.log(props.plantData.id);
 
   if (props.selectedPlant === props.id){
-    viewSinglePlant = <Modal
-      style={customStyles} isOpen={props.modalIsOpen}>
-      <SinglePlantDescription
-      name={props.name}
-      image={props.image}
-      description={props.description}
-      maintenance={props.maintenance}
-      water={props.water}
-      exposure={props.exposure}
-      growthPeriod={props.growthPeriod}
-      bloom={props.bloom}
-      id={props.id}
-    /></Modal>;
+    viewSinglePlant =
+    <Modal
+      style={customStyles}
+      isOpen={props.modalIsOpen}>
+        <SinglePlantDescription
+        name={props.name}
+        image={props.image}
+        description={props.description}
+        maintenance={props.maintenance}
+        water={props.water}
+        exposure={props.exposure}
+        growthPeriod={props.growthPeriod}
+        bloom={props.bloom}
+        id={props.id}
+      />
+      </Modal>;
   }
 
   //console.log('this is the plant ID' +  props.id);
@@ -47,15 +53,28 @@ function SinglePlant(props){
 
   function handleClickedPlant(id){
     const { dispatch } = props;
-    const action = {
-      type: 'SELECT_PLANT',
-      selectedPlant: id,
-      modalIsOpen: true
+    const action1 = {
+      type: "SELECT_PLANT",
+      id,
+      // modalIsOpen: true
     };
-    dispatch(action);
+    dispatch(action1);
+    const action2 = {
+      type: "MODAL_OPEN",
+    };
+    dispatch(action2);
     //console.log(action);
   }
   //console.log(id);
+
+  // function handleModleOpen(){
+  //   const { dispatch } = props;
+  //   const action = {
+  //     type: "MODAL_OPEN",
+  //   };
+  //   dispatch(action);
+  //   console.log(action);
+  // }
 
   return(
     <div>
@@ -107,7 +126,6 @@ SinglePlant.propTypes = {
   growthPeriod: PropTypes.string,
   bloom: PropTypes.string,
   id: PropTypes.string,
-
   modalIsOpen: PropTypes.bool,
 };
 

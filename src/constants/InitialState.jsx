@@ -17,20 +17,19 @@ import plantSVG from './../assets/imgs/pagelines.svg';
 
 export const initialState = {
   selectedPlant: null,
-  date: new Date(),
   modalIsOpen: false,
-  addToGraden: false,
   plantData: {
     1: {
-    name: "African Daisy",
-    image: africanDaisy,
-    description: "African Daisy plants are South African natives and need well-drained soils in order to perform their best. This, however, doesn't mean that they like to stay too hot and dry. In fact, their climate is typically very mild. When grown in areas with hot summers, African daisies take a break from blooming and focus on surviving the stressful heat of the summer. Once things start to cool back down, the show picks up where it left off and will bloom until frost.",
-    maintenance: plantSVG,
-    water: "1-2x a week",
-    exposure: "Medium to a high light",
-    growthPeriod: "Spring, Winter, Fall",
-    bloom: "Mid Summer",
-    id: 1
+      name: "African Daisy",
+      image: africanDaisy,
+      description: "African Daisy plants are South African natives and need well-drained soils in order to perform their best. This, however, doesn't mean that they like to stay too hot and dry. In fact, their climate is typically very mild. When grown in areas with hot summers, African daisies take a break from blooming and focus on surviving the stressful heat of the summer. Once things start to cool back down, the show picks up where it left off and will bloom until frost.",
+      maintenance: plantSVG,
+      water: "1-2x a week",
+      exposure: "Medium to a high light",
+      growthPeriod: "Spring, Winter, Fall",
+      bloom: "Mid Summer",
+      addedToGarden: false,
+      id: 1
     },
     2: {
         name: "Desert Rose",
@@ -41,6 +40,7 @@ export const initialState = {
         exposure: "Full Sun or Filtered Light",
         growthPeriod: "Year Round",
         bloom: "Summer",
+        addedToGarden: false,
         id: 2
     },
     3: {
@@ -51,6 +51,7 @@ export const initialState = {
         water: "1x every 2 weeks",
         exposure: "Shady Area - No Direct Sunlight",
         growthPeriod: "Spring, Fall",
+        addedToGarden: false,
         id: 3
     },
     4: {
@@ -61,6 +62,7 @@ export const initialState = {
         water: "1x a week",
         exposure: "Window Sunlight",
         growthPeriod: "Spring, Summer, Fall",
+        addedToGarden: false,
         id: 4
     },
     5: {
@@ -72,6 +74,7 @@ export const initialState = {
         exposure: "Window Sunlight",
         growthPeriod: "Spring, Summer, Fall",
         bloom: "Spring",
+        addedToGarden: false,
         id: 5
     },
     6: {
@@ -83,6 +86,7 @@ export const initialState = {
         exposure: "Low light",
         growthPeriod: "Spring, Summer, Fall, Winter",
         bloom: "Mid Summer",
+        addedToGarden: false,
         id: 6
     },
     7: {
@@ -94,6 +98,7 @@ export const initialState = {
         exposure: "Direct Sunlight",
         growthPeriod: "Spring, Summer",
         bloom: "Summer",
+        addedToGarden: false,
         id: 7
     },
     8: {
@@ -105,6 +110,7 @@ export const initialState = {
         exposure: "Normal light",
         growthPeriod: "Spring, Summer, Fall",
         bloom: "Spring, Summer",
+        addedToGarden: false,
         id: 8
     },
     9: {
@@ -116,6 +122,7 @@ export const initialState = {
         exposure: "Full sun or partial shade",
         growthPeriod: "Spring, Summer, Fall, Winter",
         bloom: "Late Spring, Early Summer",
+        addedToGarden: false,
         id: 9
     },
     10: {
@@ -127,6 +134,7 @@ export const initialState = {
         exposure: "Direct Sunlight",
         growthPeriod: "Spring, Summer",
         bloom: "Mid Summer",
+        addedToGarden: false,
         id: 10
     },
     11: {
@@ -138,6 +146,7 @@ export const initialState = {
         exposure: "Medium to a high light",
         growthPeriod: "Spring, Summer, Fall",
         bloom: "Spring",
+        addedToGarden: false,
         id: 11
     },
     12: {
@@ -149,6 +158,7 @@ export const initialState = {
         exposure: "Humid Conditions: high light",
         growthPeriod: "Spring, Summer",
         bloom: "Mid Spring",
+        addedToGarden: false,
         id: 12
     },
     13: {
@@ -160,6 +170,7 @@ export const initialState = {
         exposure: "Medium to a high light",
         growthPeriod: "Spring, Summer",
         bloom: "Mid Spring",
+        addedToGarden: false,
         id: 13
     },
     14: {
@@ -171,6 +182,7 @@ export const initialState = {
         exposure: "Medium to a high light",
         growthPeriod: "Spring, Summer",
         bloom: "Mid Spring",
+        addedToGarden: false,
         id: 14
     },
     15: {
@@ -182,6 +194,7 @@ export const initialState = {
         exposure: "Medium light",
         growthPeriod: "Spring, Summer",
         bloom: "Spring",
+        addedToGarden: false,
         id: 15
     }
   }

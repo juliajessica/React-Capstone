@@ -51,15 +51,15 @@ Garden.propTypes = {
   plantData: PropTypes.object,
   dispatch: PropTypes.func,
   selectedPlant: PropTypes.string,
-  name: PropTypes.string
+  name: PropTypes.string,
 };
 
 const mapStateToProps = state => {
   return {
     plantData: state.plantData,
     selectedPlant: state.selectedPlant,
-  //  modalIsOpen: state.modalIsOpen
-    addToGarden: state.addToGarden
+    modalIsOpen: state.modalIsOpen
+    // addToGarden: state.addToGarden
   };
 };
 

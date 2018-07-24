@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Modal from 'react-modal';
+//import Modal from 'react-modal';
 import { connect } from 'react-redux';
 import Garden from './Garden';
 
@@ -29,29 +29,17 @@ function SinglePlantDescription(props){
     console.log(action);
   }
 
-  if (props.addToGraden === true){
-    showNewPlantInGarden = <Garden
-      name={props.name} />;
-  }
+  // if (props.addToGarden === true){
+  //   showNewPlantInGarden = <Garden
+  //     name={props.name} />;
+  // }
 
-  // <button
-  //   onClick={handleModalOpen}>
-  //   ADD TO GARDEN
-  // </button>
-  // <Modal
-  //   style={customStyles}
-  //   isOpen={props.modalIsOpen}>
-  //   <h1>Hi, im a modal</h1>
-  //   <button
-  //     onClick={handleModalClose}>
-  //     close me
-  //   </button>
-  // </Modal>
+  //<div>{showNewPlantInGarden}</div>
 
   return(
     <div>
       <div className="flex-plant">
-        <div>{showNewPlantInGarden}</div>
+
       <h1 className="plant-name">{props.name}</h1>
         <div className="plant-desc-img">
           <img src={props.image} alt="image of plant" className="plant-desc-imgResize" />
@@ -70,8 +58,6 @@ function SinglePlantDescription(props){
           onClick={handleModalClose}>
           close me
         </button>
-
-
 
       <style jsx>{`
         .flex-plant {
@@ -114,8 +100,8 @@ function SinglePlantDescription(props){
 
 SinglePlantDescription.propTypes = {
   dispatch: PropTypes.func,
-  selectedPlant: PropTypes.object,
-  modalIsOpen: PropTypes.bool,
+  selectedPlant: PropTypes.string,
+  //modalIsOpen: PropTypes.bool,
   addToGarden: PropTypes.bool
 };
 
@@ -125,7 +111,7 @@ const mapStateToProps = state => {
     plantData: state.plantData,
     selectedPlant: state.selectedPlant,
     modalIsOpen: state.modalIsOpen,
-    addToGarden: state.addToGraden
+    addToGarden: state.addToGarden
   };
 };
 

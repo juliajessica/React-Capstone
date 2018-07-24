@@ -1,10 +1,12 @@
 import plantSelectedReducer from './plantSelectedReducer';
-import displaySelectedPlantReducer from './displaySelectedPlantReducer';
+import plantDataReducer from './plantDataReducer';
+import moduleOpenReducer from './moduleOpenReducer';
 import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
-  selectedPlant: plantSelectedReducer
-  //modalIsOpen: displaySelectedPlantReducer
+  selectedPlant: plantSelectedReducer,
+  plantData: plantDataReducer,
+  modalIsOpen: moduleOpenReducer
 });
 
 export default rootReducer;

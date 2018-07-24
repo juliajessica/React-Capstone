@@ -30,7 +30,8 @@ function PlantSearchContainer(props) {
                       bloom={singlePlant.bloom}
                       key={plantId}
                       id={plantId}
-                      plant={singlePlant} />
+                      plant={singlePlant}
+                      modalIsOpen={singlePlant.modalIsOpen} />
                   );
                   //console.log(props.description);
                 })}
