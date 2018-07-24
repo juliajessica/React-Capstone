@@ -1,3 +1,3 @@
 export const SELECT_PLANT = "SELECT_PLANT";
-export const ADD_PLANT_TO_GARDEN = "DISPLAY_PLANT";
-export const MODAL_OPEN = "MODAL_OPEN";
+export const ADD_PLANT_TO_GARDEN = "ADD_PLANT_TO_GARDEN";
+export const TOGGLE_MODAL = "TOGGLE_MODAL";

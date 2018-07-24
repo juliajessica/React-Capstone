@@ -10,7 +10,7 @@ function SinglePlantDescription(props){
   function handleModalClose(){
     const { dispatch } = props;
     const action = {
-      type: 'SELECT_PLANT',
+      type: 'TOGGLE_MODAL',
       modalIsOpen: false
     };
     dispatch(action);
@@ -21,8 +21,6 @@ function SinglePlantDescription(props){
     const { dispatch } = props;
     const action = {
       type: 'ADD_PLANT_TO_GARDEN',
-      selectedPlant: id,
-      modalIsOpen: true,
       addToGarden: true
     };
     dispatch(action);
@@ -101,7 +99,7 @@ function SinglePlantDescription(props){
 SinglePlantDescription.propTypes = {
   dispatch: PropTypes.func,
   selectedPlant: PropTypes.string,
-  //modalIsOpen: PropTypes.bool,
+  modalIsOpen: PropTypes.bool,
   addToGarden: PropTypes.bool
 };
 

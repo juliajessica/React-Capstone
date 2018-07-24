@@ -5,10 +5,9 @@ const moduleOpenReducer = (state = initialState.modalIsOpen, action) => {
   //console.log('this is the selected book reducer', action.selectedPlant);
 
   switch (action.type) {
-    case 'MODAL_OPEN':
-    // case 'TOGGLE_MODAL':
+    case 'TOGGLE_MODAL':
       const newState = !state;
-      console.log(newState);
+      //console.log(newState);
       return newState;
   default:
     return state;

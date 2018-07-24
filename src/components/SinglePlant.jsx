@@ -60,21 +60,12 @@ function SinglePlant(props){
     };
     dispatch(action1);
     const action2 = {
-      type: "MODAL_OPEN",
+      type: "TOGGLE_MODAL",
     };
     dispatch(action2);
     //console.log(action);
   }
   //console.log(id);
-
-  // function handleModleOpen(){
-  //   const { dispatch } = props;
-  //   const action = {
-  //     type: "MODAL_OPEN",
-  //   };
-  //   dispatch(action);
-  //   console.log(action);
-  // }
 
   return(
     <div>
