@@ -2,75 +2,38 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import SinglePlant from './SinglePlant';
-import SinglePlantDescription from './SinglePlantDescription';
+//import SinglePlantDescription from './SinglePlantDescription';
 //import { viewPlantDetails } from './../actions';
-// import c from './../constants';
 
-//need to change this into a classbased component
 function PlantSearchContainer(props) {
-  let viewSinglePlant = null;
-  console.log(props.selectedPlant);
-  //console.log(props.plantData.id);
-  if (props.selectedPlant){
-    viewSinglePlant = <SinglePlantDescription selectedPlant={props.plantData[props.selectedPlant]} />;
-  }
-  console.log(viewSinglePlant);
-
-//THIS IS WHAT I NEED TO DO!!!!
-// if selectedPlant (referrring to props being mapped at bottom of file) is equal to the plantID from loop, render additional viewPlantDetails
-//<detail component></detail>
-// return <PlantDetail
-//    name={plant.name}
-//    image={plant.image}
-//    description={plant.description}
-//    maintenance={plant.maintenance}
-//    water={plant.water}
-//    exposure={plant.exposure}
-//    growthPeriod={plant.growthPeriod}
-//    bloom={plant.bloom}
-//    key={plantId}
-//    id={plantId}
-//    />;
-
-
-// if (props.selectedPlant === props.plantData.id) {
-//   //console.log(props.selectedPlant);
-//   clickedPlant = <SinglePlant
-//     selectedPlant = {props.plantData[props.selectedPlant]}
-//     name={singlePlant.name}
-//     image={singlePlant.image}
-//     key={plantId}
-//     id={plantId}
-//     plant={singlePlant} />;
-//   console.log(clickedPlant);
-//   return (
-//     <div>
-//       <h1>this is the selected ticket</h1>
-//       {clickedPlant}
-//     </div>
-//   );
-
 
   return(
     <div>
       <div className="plant-Search">
         <h3>Plant Search</h3>
           <form>
-            <div>{viewSinglePlant}</div>
+
             <input type="text" placeholder="SEARCH:" className="search-input"></input>
               <div className="singlePlant">
                 {Object.keys(props.plantData).map(function(plantId){
                   let singlePlant = props.plantData[plantId]; //single plant
+                  //console.log(props.selectedPlant);
                   //console.log(singlePlant);
                   return (
                     <SinglePlant
                       name={singlePlant.name}
                       image={singlePlant.image}
+                      description={props.description}
+                      maintenance={props.maintenance}
+                      water={props.water}
+                      exposure={props.exposure}
+                      growthPeriod={props.growthPeriod}
+                      bloom={props.bloom}
                       key={plantId}
                       id={plantId}
                       plant={singlePlant} />
                   );
-                  console.log(singlePlant);
+                  console.log(props.description);
                 })}
               </div>
           </form>
@@ -111,17 +74,7 @@ function PlantSearchContainer(props) {
 
 PlantSearchContainer.propTypes = {
   plantData: PropTypes.object,
-  selectedPlant: PropTypes.object,
-  image: PropTypes.string,
-  name: PropTypes.string,
-  description: PropTypes.string,
-  maintenance: PropTypes.string,
-  water: PropTypes.string,
-  exposure: PropTypes.string,
-  growthPeriod: PropTypes.string,
-  bloom: PropTypes.string,
-  key: PropTypes.string,
-  id: PropTypes.string,
+  selectedPlant: PropTypes.string
 };
 
 const mapStateToProps = state => {

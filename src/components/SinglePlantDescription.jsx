@@ -3,15 +3,23 @@ import PropTypes from 'prop-types';
 import plantSVG from './../assets/imgs/pagelines.svg';
 
 function SinglePlantDescription(props){
+  console.log(props.description);
 
   return(
     <div>
       <h1>plant description</h1>
-
       <h2><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{props.name}</h2>
+      <p>Description: {props.description}</p>
       <div className="plant-desc-img">
         <img src={props.image} alt="image of plant" className="plant-desc-imgResize" />
-          <p>Description: {props.description}</p>
+
+          <p>{props.maintenance}</p>
+          <p>{props.water}</p>
+          <p>{props.exposure}</p>
+          <p>{props.growthPeriod}</p>
+          <p>{props.bloom}</p>
+
+
       </div>
       <style jsx>{`
         .plant-desc-img {
@@ -33,17 +41,7 @@ function SinglePlantDescription(props){
 
 
 SinglePlantDescription.propTypes = {
-  selectedPlant: PropTypes.object,
-  // image: PropTypes.string,
-  // name: PropTypes.string,
-  // description: PropTypes.string,
-  // maintenance: PropTypes.string,
-  // water: PropTypes.string,
-  // exposure: PropTypes.string,
-  // growthPeriod: PropTypes.string,
-  // bloom: PropTypes.string,
-  // key: PropTypes.string,
-  // id: PropTypes.string,
+  selectedPlant: PropTypes.object
 };
 
 export default SinglePlantDescription;
