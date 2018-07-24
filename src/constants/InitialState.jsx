@@ -17,6 +17,7 @@ import plantSVG from './../assets/imgs/pagelines.svg';
 
 export const initialState = {
   selectedPlant: null,
+  plantInGarden: null,
   modalIsOpen: false,
   plantData: {
     1: {
@@ -51,6 +52,7 @@ export const initialState = {
         water: "1x every 2 weeks",
         exposure: "Shady Area - No Direct Sunlight",
         growthPeriod: "Spring, Fall",
+        bloom: "Late Spring",
         addedToGarden: false,
         id: 3
     },

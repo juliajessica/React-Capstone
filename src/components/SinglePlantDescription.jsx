@@ -21,41 +21,46 @@ function SinglePlantDescription(props){
     const { dispatch } = props;
     const action = {
       type: 'ADD_PLANT_TO_GARDEN',
-      addToGarden: true
+      addedToGarden: true
     };
     dispatch(action);
     console.log(action);
   }
 
-  // if (props.addToGarden === true){
-  //   showNewPlantInGarden = <Garden
-  //     name={props.name} />;
-  // }
+  showNewPlantInGarden = <div className="single-plant-description">
 
-  //<div>{showNewPlantInGarden}</div>
+  <h1 className="plant-name">{props.name}</h1>
+      <div className="plant-desc-img">
+        <img src={props.image} alt="image of plant" className="plant-desc-imgResize" />
+      </div>
+    <p><span className="plant-properties">Description:</span> {props.description}</p>
+    <p><span className="plant-properties">Maintenance:</span> <img src={props.maintenance} alt="leaf icon" className="leaf-svg"/></p>
+    <p><span className="plant-properties">Water:</span> {props.water}</p>
+    <p><span className="plant-properties">Exposure:</span> {props.exposure}</p>
+    <p><span className="plant-properties">Growth Period:</span> {props.growthPeriod}</p>
+    <p><span className="plant-properties">Bloom:</span> {props.bloom}</p>
+    <button
+      onClick = {() => handleAddToGarden(props.id)} >
+      ADD TO GARDEN</button>
+      <button
+        onClick={handleModalClose}>
+        close me
+      </button>
+
+    </div>;
+
+
+  if (props.addToGarden === true){
+    showNewPlantInGarden = <Garden
+      name={props.name} />;
+  } else {
+    showNewPlantInGarden;
+  }
+
 
   return(
     <div>
-      <div className="flex-plant">
-
-      <h1 className="plant-name">{props.name}</h1>
-        <div className="plant-desc-img">
-          <img src={props.image} alt="image of plant" className="plant-desc-imgResize" />
-        </div>
-      </div>
-      <p><span className="plant-properties">Description:</span> {props.description}</p>
-      <p><span className="plant-properties">Maintenance:</span> <img src={props.maintenance} alt="leaf icon" className="leaf-svg"/></p>
-      <p><span className="plant-properties">Water:</span> {props.water}</p>
-      <p><span className="plant-properties">Exposure:</span> {props.exposure}</p>
-      <p><span className="plant-properties">Growth Period:</span> {props.growthPeriod}</p>
-      <p><span className="plant-properties">Bloom:</span> {props.bloom}</p>
-      <button
-        onClick = {() => handleAddToGarden(props.id)} >
-        ADD TO GARDEN</button>
-        <button
-          onClick={handleModalClose}>
-          close me
-        </button>
+      <div>{showNewPlantInGarden}</div>
 
       <style jsx>{`
         .flex-plant {
