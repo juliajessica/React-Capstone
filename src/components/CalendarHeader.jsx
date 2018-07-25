@@ -1,11 +1,12 @@
 import React from 'react';
+import CurrentDate from './CurrentDate';
 
 function CalendarHeader(){
 
   return(
     <div>
       <div className="garden-user-name">
-        <p>JULY</p>
+        <p>JULY</p><CurrentDate/>
       </div>
       <div className="verticle-line"></div>
       <style jsx>{`

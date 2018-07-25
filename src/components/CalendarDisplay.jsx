@@ -6,8 +6,6 @@ import Calendar from 'react-calendar'
 import CalendarHeader from './CalendarHeader';
 
 class CalendarDisplay extends Component {
-  //const { date, selectedPlant } = plantData;
-  //onChange = date => this.setState({ date })
 
   render(){
     return(
@@ -15,6 +13,7 @@ class CalendarDisplay extends Component {
         <div className="cal-header">
           <h3>Calendar</h3>
           <CalendarHeader/>
+          <p>{this.date}</p>
         </div>
 
         <div className="calendar">
@@ -61,7 +60,6 @@ const mapStateToProps = state => {
   return {
     plantData: state.plantData,
     selectedPlant: state.selectedPlant,
-    //date: new Date(),
   };
 };
 
