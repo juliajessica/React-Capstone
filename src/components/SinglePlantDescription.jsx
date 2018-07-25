@@ -117,8 +117,6 @@ SinglePlantDescription.propTypes = {
   plantData: PropTypes.object,
   selectedPlant: PropTypes.string,
   modalIsOpen: PropTypes.bool,
-  // addToGarden: PropTypes.bool,
-  //name: PropTypes.string,
 };
 
 
@@ -127,7 +125,6 @@ const mapStateToProps = state => {
     plantData: state.plantData,
     selectedPlant: state.selectedPlant,
     modalIsOpen: state.modalIsOpen,
-    addToGarden: state.addToGarden
   };
 };
 

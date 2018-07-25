@@ -1,6 +1,5 @@
 import React from 'react';
 import settings from './../assets/imgs/settings.svg';
-import { Link } from 'react-router-dom';
 import GardenName from './GardenName';
 import GardenList from './GardenList';
 import PropTypes from 'prop-types';
@@ -16,7 +15,7 @@ function GardenListContainer(props){
         <GardenName/>
           {Object.keys(props.plantData).map(function(plantId){
               let singleGardenItem = props.plantData[plantId];
-
+              console.log('this is all the data passed in the container:' + props.plantData);
             return (
               <GardenList
                 name={singleGardenItem.name}
@@ -49,7 +48,6 @@ const mapStateToProps = state => {
   return {
     plantData: state.plantData,
     selectedPlant: state.selectedPlant,
-    plantInGarden: state.plantInGarden
   };
 };
 

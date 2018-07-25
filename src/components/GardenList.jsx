@@ -1,7 +1,4 @@
 import React from 'react';
-import settings from './../assets/imgs/settings.svg';
-import { Link } from 'react-router-dom';
-import GardenName from './GardenName';
 import Garden from './Garden';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -22,6 +19,9 @@ function GardenList(props){
   return(
     <div>
       <div className="garden-item">
+        <div>
+          <p>{props.name}</p>
+        </div>
           <div>
             {showNewGardenItem}
           </div>
@@ -47,16 +47,12 @@ GardenList.propTypes = {
   plantData: PropTypes.object,
   dispatch: PropTypes.func,
   selectedPlant: PropTypes.string,
-  // selectedPlant: PropTypes.string,
-  // name: PropTypes.string,
-  // plantInGarden: PropTypes.bool,
 };
 
 const mapStateToProps = state => {
   return {
     plantData: state.plantData,
     selectedPlant: state.selectedPlant,
-    plantInGarden: state.plantInGarden
   };
 };
 
