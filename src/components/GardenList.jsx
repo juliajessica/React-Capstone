@@ -46,15 +46,17 @@ function GardenList(props){
     const { dispatch } = props;
     const action = {
       type: "TOGGLE_MODAL",
+      id,
     };
     dispatch(action);
-    //console.log(action);
+    console.log('this is handleEditGardenItem' + action);
   }
   //console.log(id);
 
   return(
     <div>
       <div className="garden-item">
+        <div>{editSinglePlant}</div>
         <div className="plant-garden">
           <div className="plant-container">
             <img src={props.image} alt="image of plant in garden" className="plant-img"/>
@@ -83,7 +85,8 @@ function GardenList(props){
           background-color: #EBAFA4;
           display: flex;
           align-items: center;
-          justify-content: space-around;
+          justify-content: space-between;
+          padding: .4rem .6rem;
         }
         .plant-container {
           display: block;
@@ -105,15 +108,16 @@ function GardenList(props){
 
 GardenList.propTypes = {
   plantData: PropTypes.object,
-  name: PropTypes.string,
   dispatch: PropTypes.func,
   selectedPlant: PropTypes.string,
+  modalIsOpen: PropTypes.bool,
 };
 
 const mapStateToProps = state => {
   return {
     plantData: state.plantData,
     selectedPlant: state.selectedPlant,
+    modalIsOpen: state.modalIsOpen,
   };
 };
 

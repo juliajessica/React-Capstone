@@ -30,6 +30,7 @@ function PlantSearchContainer(props) {
                         growthPeriod={singlePlant.growthPeriod}
                         bloom={singlePlant.bloom}
                         id={plantId}
+                        key={plantId}
                         modalIsOpen={singlePlant.modalIsOpen} />
                      );
                     //console.log(props.description);

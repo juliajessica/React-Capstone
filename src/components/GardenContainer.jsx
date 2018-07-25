@@ -23,6 +23,7 @@ function GardenListContainer(props){
                          name={singleGardenItem.name}
                          image={singleGardenItem.image}
                          id={plantId}
+                         key={plantId}
                        />;
               }
 
