@@ -11,8 +11,8 @@ const plantDataReducer = (state = initialState.plantData, action) => {
     newState = Object.assign({}, state[action.id],{
       addedToGarden: true
     });
-    console.log(action.id);
-    console.log('Action: ', newState);
+    //console.log(action.id);
+    //console.log('Action: ', newState);
     newGardenItemStateSlice = Object.assign({}, state, {
       [action.id]: newState
     });

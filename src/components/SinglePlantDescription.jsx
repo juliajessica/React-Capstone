@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import arrow from '././../assets/imgs/arrow.svg';
 
 function SinglePlantDescription(props){
-  let showNewPlantInGarden = null;
 
   function handleModalClose(){
     const { dispatch } = props;
@@ -118,8 +117,8 @@ SinglePlantDescription.propTypes = {
   plantData: PropTypes.object,
   selectedPlant: PropTypes.string,
   modalIsOpen: PropTypes.bool,
-  addToGarden: PropTypes.bool,
-  name: PropTypes.string,
+  // addToGarden: PropTypes.bool,
+  //name: PropTypes.string,
 };
 
 

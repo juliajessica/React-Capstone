@@ -5,8 +5,6 @@ import SinglePlant from './SinglePlant';
 import Garden from './Garden';
 
 function PlantSearchContainer(props) {
-  let showNewPlantInGarden = null;
-
 
   return(
     <div>

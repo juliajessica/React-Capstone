@@ -8,57 +8,35 @@ import { connect } from 'react-redux';
 
 function GardenList(props){
   console.log('this is props passed' + props.name);
+  let showNewGardenItem = null;
 
-  // let newGardenItem = null;
-  //
-  //   console.log(props.addedToGarden);
-  //
-  //   <div className="plant-garden-loop">
-  //     {Object.keys(props.plantData).map(function(plantId){
-  //       let singleGardenItem = props.plantData[plantId];
-  //       if (props.addedToGarden === true) {
-  //
-  //         newGardenItem = <Garden
-  //           name={singleGardenItem.name}
-  //           id={plantId}
-  //           addedToGarden={singleGardenItem.addedToGarden} />;
-  //         }
-  //     })}
-  //   </div>
-  //
-
-
+  if (props.addedToGarden === true) {
+    console.log('this should be true' + props.addedToGarden);
+    showNewGardenItem =
+    <Garden
+      name={props.name}
+      id={props.id}
+      addedToGarden={props.addedToGarden} />;
+  }
 
   return(
     <div>
-      <div className="garden">
-        <h3>Garden</h3>
-        <GardenName/>
-
+      <div className="garden-item">
           <div>
-            {newGardenItem}
+            {showNewGardenItem}
           </div>
+
 
 
       </div>
       <style jsx>{`
-        .garden {
+        .garden-item {
           margin-top: 0rem;
           margin: auto;
           height: 565px;
         }
 
-        .plant-garden-loop {
-          margin-top: 2rem;
-          height: 90px;
-          width: 100%;
-          background-color: #EBAFA4;
-          display: flex;
-          align-items: center;
-          justify-content: space-around;
-        }
-
-      `}
+        `}
       </style>
 
     </div>
@@ -69,8 +47,9 @@ GardenList.propTypes = {
   plantData: PropTypes.object,
   dispatch: PropTypes.func,
   selectedPlant: PropTypes.string,
-  name: PropTypes.string,
-  plantInGarden: PropTypes.bool,
+  // selectedPlant: PropTypes.string,
+  // name: PropTypes.string,
+  // plantInGarden: PropTypes.bool,
 };
 
 const mapStateToProps = state => {

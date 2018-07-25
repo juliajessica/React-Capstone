@@ -12,6 +12,7 @@ import CalendarAdd from './CalendarAdd';
 import CalendarEdit from './CalendarEdit';
 import CalendarToday from './CalendarToday';
 import Garden from './Garden';
+import GardenContainer from './GardenContainer';
 import GardenList from './GardenList';
 import GardenEdit from './GardenEdit';
 import Profile from './Profile';
@@ -40,6 +41,7 @@ class Router extends Component {
         <Route path='/plant-search' component={PlantSearchContainer}/>
         <Route path='/plant' component={SinglePlant}/>
         <Route path='/plant-detail' component={SinglePlantDescription}/>
+        <Route path='/garden-container' component={GardenContainer}/>
         <Route path='/garden-list' component={GardenList}/>
         <Route path='/garden' component={Garden}/>
         <Route path='/garden-edit' component={GardenEdit}/>

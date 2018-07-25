@@ -51,15 +51,16 @@ Garden.propTypes = {
   plantData: PropTypes.object,
   dispatch: PropTypes.func,
   selectedPlant: PropTypes.string,
-  name: PropTypes.string,
-  plantInGarden: PropTypes.bool,
+  // name: PropTypes.string,
+  // plantInGarden: PropTypes.bool,
 };
 
 const mapStateToProps = state => {
   return {
     plantData: state.plantData,
     selectedPlant: state.selectedPlant,
-    plantInGarden: state.plantInGarden
+    plantInGarden: state.plantInGarden,
+    addToGarden: state.addToGarden
   };
 };
 
