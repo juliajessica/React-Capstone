@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import Modal from 'react-modal';
 import { connect } from 'react-redux';
-import Garden from './Garden';
+import { Link } from 'react-router-dom';
 
 function SinglePlantDescription(props){
   let showNewPlantInGarden = null;
@@ -21,46 +20,36 @@ function SinglePlantDescription(props){
     const { dispatch } = props;
     const action = {
       type: 'ADD_PLANT_TO_GARDEN',
-      addedToGarden: true
+      id,
+
     };
     dispatch(action);
     console.log(action);
   }
 
-  showNewPlantInGarden = <div className="single-plant-description">
-
-  <h1 className="plant-name">{props.name}</h1>
-      <div className="plant-desc-img">
-        <img src={props.image} alt="image of plant" className="plant-desc-imgResize" />
-      </div>
-    <p><span className="plant-properties">Description:</span> {props.description}</p>
-    <p><span className="plant-properties">Maintenance:</span> <img src={props.maintenance} alt="leaf icon" className="leaf-svg"/></p>
-    <p><span className="plant-properties">Water:</span> {props.water}</p>
-    <p><span className="plant-properties">Exposure:</span> {props.exposure}</p>
-    <p><span className="plant-properties">Growth Period:</span> {props.growthPeriod}</p>
-    <p><span className="plant-properties">Bloom:</span> {props.bloom}</p>
-    <button
-      onClick = {() => handleAddToGarden(props.id)} >
-      ADD TO GARDEN</button>
-      <button
-        onClick={handleModalClose}>
-        close me
-      </button>
-
-    </div>;
-
-
-  if (props.addToGarden === true){
-    showNewPlantInGarden = <Garden
-      name={props.name} />;
-  } else {
-    showNewPlantInGarden;
-  }
-
-
   return(
     <div>
-      <div>{showNewPlantInGarden}</div>
+      <div className="single-plant-description">
+
+        <h1 className="plant-name">{props.name}</h1>
+            <div className="plant-desc-img">
+              <img src={props.image} alt="image of plant" className="plant-desc-imgResize" />
+            </div>
+          <p><span className="plant-properties">Description:</span> {props.description}</p>
+          <p><span className="plant-properties">Maintenance:</span> <img src={props.maintenance} alt="leaf icon" className="leaf-svg"/></p>
+          <p><span className="plant-properties">Water:</span> {props.water}</p>
+          <p><span className="plant-properties">Exposure:</span> {props.exposure}</p>
+          <p><span className="plant-properties">Growth Period:</span> {props.growthPeriod}</p>
+          <p><span className="plant-properties">Bloom:</span> {props.bloom}</p>
+          <Link to='/garden'><button
+            onClick = {() => handleAddToGarden(props.id)} >
+            ADD TO GARDEN</button></Link>
+            <button
+              onClick={handleModalClose}>
+              close me
+            </button>
+          </div>
+
 
       <style jsx>{`
         .flex-plant {
@@ -105,7 +94,8 @@ SinglePlantDescription.propTypes = {
   dispatch: PropTypes.func,
   selectedPlant: PropTypes.string,
   modalIsOpen: PropTypes.bool,
-  addToGarden: PropTypes.bool
+  addToGarden: PropTypes.bool,
+  //name: PropTypes.string,
 };
 
 

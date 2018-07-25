@@ -16,7 +16,6 @@ import GardenEdit from './GardenEdit';
 import Profile from './Profile';
 import ProfileEdit from './ProfileEdit';
 import Nav from './Nav.jsx';
-//<Route exact path="/" render={() => <Redirect to="/login" />} />
 
 import './App.css';
 

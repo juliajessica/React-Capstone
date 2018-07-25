@@ -2,42 +2,61 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import SinglePlant from './SinglePlant';
+import Garden from './Garden';
+
 //import { viewPlantDetails } from './../actions';
 
 function PlantSearchContainer(props) {
+  let showNewPlantInGarden = null;
+
+
+
+
+     // if (props.addToGarden === true){
+     //   showNewPlantInGarden =
+     //   <Garden
+     //     name={props.name} />;
+     //
+     // } else {
+     //   showNewPlantInGarden;
+     // }
+     // //console.log(props.plantData.id.addToGarden);
 
   return(
     <div>
       <div className="plant-Search">
-        <h3>Plant Search</h3>
-          <form>
+          <h3>Plant Search</h3>
+            <form>
 
-            <input type="text" placeholder="SEARCH:" className="search-input"></input>
-              <div className="singlePlant">
-                {Object.keys(props.plantData).map(function(plantId){
-                  let singlePlant = props.plantData[plantId];
-                  //console.log(props.selectedPlant);
-                  //console.log(singlePlant);
-                  return (
-                    <SinglePlant
-                      name={singlePlant.name}
-                      image={singlePlant.image}
-                      description={singlePlant.description}
-                      maintenance={singlePlant.maintenance}
-                      water={singlePlant.water}
-                      exposure={singlePlant.exposure}
-                      growthPeriod={singlePlant.growthPeriod}
-                      bloom={singlePlant.bloom}
-                      key={plantId}
-                      id={plantId}
-                      plant={singlePlant}
-                      modalIsOpen={singlePlant.modalIsOpen} />
-                  );
-                  //console.log(props.description);
-                })}
-              </div>
-          </form>
-      </div>
+              <input type="text" placeholder="SEARCH:" className="search-input"></input>
+                <div className="singlePlant">
+                  {Object.keys(props.plantData).map(function(plantId){
+                    let singlePlant = props.plantData[plantId];
+
+
+                    //console.log(props.selectedPlant);
+                    //console.log(singlePlant);
+                    return (
+                      <SinglePlant
+                        name={singlePlant.name}
+                        image={singlePlant.image}
+                        description={singlePlant.description}
+                        maintenance={singlePlant.maintenance}
+                        water={singlePlant.water}
+                        exposure={singlePlant.exposure}
+                        growthPeriod={singlePlant.growthPeriod}
+                        bloom={singlePlant.bloom}
+                        key={plantId}
+                        id={plantId}
+                        plant={singlePlant}
+                        modalIsOpen={singlePlant.modalIsOpen} />
+                     );
+                    //console.log(props.description);
+                   })}
+                </div>
+              </form>
+           </div>
+
 
       <style jsx>{`
         .plant-Search{
@@ -74,14 +93,15 @@ function PlantSearchContainer(props) {
 
 PlantSearchContainer.propTypes = {
   plantData: PropTypes.object,
-  selectedPlant: PropTypes.string
+  selectedPlant: PropTypes.string,
+
 };
 
 const mapStateToProps = state => {
   return {
     plantData: state.plantData,
     selectedPlant: state.selectedPlant,
-    date: new Date(),
+    //plantInGarden: state.plantInGarden
   };
 };
 

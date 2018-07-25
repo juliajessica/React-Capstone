@@ -17,7 +17,7 @@ import plantSVG from './../assets/imgs/pagelines.svg';
 
 export const initialState = {
   selectedPlant: null,
-  plantInGarden: null,
+  //plantInGarden: {},
   modalIsOpen: false,
   plantData: {
     1: {
