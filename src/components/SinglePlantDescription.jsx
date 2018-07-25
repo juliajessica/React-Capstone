@@ -44,9 +44,11 @@ function SinglePlantDescription(props){
           <p><span className="plant-properties">Exposure:</span> {props.exposure}</p>
           <p><span className="plant-properties">Growth Period:</span> {props.growthPeriod}</p>
           <p><span className="plant-properties">Bloom:</span> {props.bloom}</p>
-          <Link to='/garden'><button
+
+            <button
             onClick = {() => handleAddToGarden(props.id)} className="add-button">
-            ADD TO GARDEN</button></Link>
+            ADD TO GARDEN</button>
+
           </div>
 
 
@@ -116,7 +118,7 @@ SinglePlantDescription.propTypes = {
   selectedPlant: PropTypes.string,
   modalIsOpen: PropTypes.bool,
   addToGarden: PropTypes.bool,
-  //name: PropTypes.string,
+  name: PropTypes.string,
 };
 
 

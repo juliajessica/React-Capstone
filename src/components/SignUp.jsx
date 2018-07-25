@@ -60,6 +60,7 @@ function SignUp(){
           padding: .5rem 0;
           margin: 2rem, auto;
           opacity: .8;
+          cursor: pointer;
         }
       `}
       </style>

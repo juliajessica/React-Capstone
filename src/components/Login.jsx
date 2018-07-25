@@ -76,6 +76,7 @@ function Login(){
           padding: .5rem 0;
           margin: .3rem 0;
           opacity: .8;
+          cursor: pointer;
         }
       `}</style>
     </div>

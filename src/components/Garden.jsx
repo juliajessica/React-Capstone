@@ -3,7 +3,7 @@ import settings from './../assets/imgs/settings.svg';
 import { Link } from 'react-router-dom';
 import GardenName from './GardenName';
 import PropTypes from 'prop-types';
-//import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 function Garden(props){
 
@@ -52,7 +52,7 @@ Garden.propTypes = {
   plantData: PropTypes.object,
   dispatch: PropTypes.func,
   selectedPlant: PropTypes.string,
-  // name: PropTypes.string,
+  name: PropTypes.string,
   plantInGarden: PropTypes.bool,
 };
 
@@ -60,9 +60,8 @@ const mapStateToProps = state => {
   return {
     plantData: state.plantData,
     selectedPlant: state.selectedPlant,
-    //modalIsOpen: state.modalIsOpen,
     plantInGarden: state.plantInGarden
   };
 };
 
-export default (Garden);
+export default connect(mapStateToProps)(Garden);

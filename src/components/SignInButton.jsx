@@ -17,6 +17,7 @@ function SignInButton(){
           padding: .5rem 0;
           margin: .3rem 0;
           border: 0px solid;
+          cursor: pointer;
         }
       `}
       </style>

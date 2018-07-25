@@ -11,7 +11,7 @@ class CalendarDisplay extends Component {
 
   render(){
     return(
-      <div calssName="full-calendar">
+      <div className="full-calendar">
         <div className="cal-header">
           <h3>Calendar</h3>
           <CalendarHeader/>
@@ -29,12 +29,13 @@ class CalendarDisplay extends Component {
         <style jsx>{`
           .full-calendar {
             height: 565px;
-            padding: 0 2rem;
+            margin-top: 0rem;
+            padding: 0;
+            height: 565px;
           }
           .cal-header {
             margin-bottom: 1rem;
           }
-
           .calendar {
             padding: 0 2rem;
           }
