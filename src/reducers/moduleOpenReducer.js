@@ -1,5 +1,5 @@
 import constants from './../constants';
-const { initialState, types } = constants;
+const { initialState } = constants;
 
 const moduleOpenReducer = (state = initialState.modalIsOpen, action) => {
 

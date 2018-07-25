@@ -5,10 +5,10 @@ import CalendarHeader from './CalendarHeader';
 import PropTypes from 'prop-types';
 
 function CurrentDate(props) {
-  var today = new Date();
-  var dd = today.getDate();
-  var mm = today.getMonth()+1; //January is 0!
-  var yyyy = today.getFullYear();
+  // var today = new Date();
+  // var dd = today.getDate();
+  // var mm = today.getMonth()+1; //January is 0!
+  // var yyyy = today.getFullYear();
   //
   // if(dd<10) {
   //   dd = '0'+dd

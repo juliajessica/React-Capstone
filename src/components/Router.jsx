@@ -14,7 +14,6 @@ import CalendarToday from './CalendarToday';
 import Garden from './Garden';
 import GardenContainer from './GardenContainer';
 import GardenList from './GardenList';
-import GardenEdit from './GardenEdit';
 import Profile from './Profile';
 import ProfileEdit from './ProfileEdit';
 import Nav from './Nav.jsx';
@@ -44,7 +43,6 @@ class Router extends Component {
         <Route path='/personal-garden' component={GardenContainer}/>
         <Route path='/garden-list' component={GardenList}/>
         <Route path='/garden' component={Garden}/>
-        <Route path='/garden-edit' component={GardenEdit}/>
         <Route path='/profile' component={Profile}/>
         <Route path='/profile-edit' component={ProfileEdit}/>
         <Nav />

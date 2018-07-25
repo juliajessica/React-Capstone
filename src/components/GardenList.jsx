@@ -2,12 +2,11 @@ import React from 'react';
 import Garden from './Garden';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import settings from './../assets/imgs/settings.svg';
 import Modal from 'react-modal';
 
 function GardenList(props){
-  console.log('gardenList' + props.name);
+  console.log('gardenList' + props.id);
 
   const customStyles = {
     content: {
@@ -63,7 +62,7 @@ function GardenList(props){
           </div>
           <h1>{props.name}</h1>
 
-            <img src={settings} alt="setting icon to edit garden" onClick = {() => handleEditGardenItem(props.id)}/>
+            <img src={settings} className="settings-svg" alt="setting icon to edit garden" onClick = {() => handleEditGardenItem(props.id)}/>
 
         </div>
 
@@ -77,6 +76,9 @@ function GardenList(props){
         }
         .plant-garden img{
           padding-right: 1rem;
+        }
+        .settings-svg {
+          cursor: pointer;
         }
         .plant-garden {
           margin-top: 2rem;

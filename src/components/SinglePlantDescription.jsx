@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import arrow from '././../assets/imgs/arrow.svg';
 
 function SinglePlantDescription(props){
@@ -60,6 +59,7 @@ function SinglePlantDescription(props){
 
         .arrow-svg {
           width: 20px;
+          cursor: pointer;
         }
 
         .plant-name {
@@ -93,7 +93,42 @@ function SinglePlantDescription(props){
           padding: .5rem 0;
           margin: .3rem 0;
           opacity: .8;
+          cursor: pointer;
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+          -webkit-animation-iteration-count: infinite;
         }
+
+        .add-button:hover {
+          cursor: pointer;
+          animation-name: bounce;
+          -moz-animation-name: bounce;
+         }
+
+        @keyframes bounce {
+        	0%, 100%, 20%, 50%, 80% {
+        		-webkit-transform: translateY(0);
+        		-ms-transform: translateY(0);
+        		transform: translateY(0)
+        	}
+        	40% {
+        		-webkit-transform: translateY(-10px);
+        		-ms-transform: translateY(-10px);
+        		transform: translateY(-10px)
+        	}
+        	60% {
+        		-webkit-transform: translateY(-5px);
+        		-ms-transform: translateY(-5px);
+        		transform: translateY(-5px)
+        	}
+        }
+
+
 
         .plant-properties {
           font-weight: bold;
@@ -116,7 +151,7 @@ SinglePlantDescription.propTypes = {
   dispatch: PropTypes.func,
   plantData: PropTypes.object,
   selectedPlant: PropTypes.string,
-  // modalIsOpen: PropTypes.bool,
+  modalIsOpen: PropTypes.bool,
 };
 
 

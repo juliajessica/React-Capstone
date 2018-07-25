@@ -16,7 +16,6 @@ import aloe from './../assets/imgs/aloe.jpg';
 import plantSVG from './../assets/imgs/pagelines.svg';
 
 export const initialState = {
-  date: new Date(),
   selectedPlant: null,
   modalIsOpen: false,
   plantData: {

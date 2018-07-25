@@ -6,9 +6,9 @@ function EditButton(){
 
   return(
     <div>
-      <Link to='/calendar-edit'><button type="button" className="edit-cal">EDIT</button></Link>
+      <Link to='/calendar-edit'><button type="button" className="edit-btn">EDIT</button></Link>
     <style jsx>{`
-      .edit-cal {
+      .edit-btn {
         font-size: .8rem;
         color: white;
         width: 10rem;
@@ -18,6 +18,10 @@ function EditButton(){
         margin: .3rem 0;
         border: 0px solid;
         opacity: .8;
+        cursor: pointer;
+      }
+      .edit-btn: hover {
+
       }
       `}
     </style>

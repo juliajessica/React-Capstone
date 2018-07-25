@@ -84,8 +84,3 @@ function Login(){
 }
 
 export default Login;
-
-
-//input[type=text]:focus {
-//   border: 3px solid #DA806F;
-// }

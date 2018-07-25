@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import SinglePlant from './SinglePlant';
-import Garden from './Garden';
+
 
 function PlantSearchContainer(props) {
 

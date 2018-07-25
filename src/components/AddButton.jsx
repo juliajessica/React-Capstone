@@ -17,6 +17,7 @@ function AddButton(){
         margin: .3rem 0;
         border: 0px solid;
         opacity: .8;
+        cursor: pointer;
       }
       `}
     </style>

@@ -1,7 +1,6 @@
 import React from 'react';
 import add from './../assets/imgs/add.svg';
 import { Link } from 'react-router-dom';
-//<img src={} />
 
 function GardenName(){
 

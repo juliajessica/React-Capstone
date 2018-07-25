@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import settings from './../assets/imgs/settings.svg';
 import GardenName from './GardenName';
 import GardenList from './GardenList';
 

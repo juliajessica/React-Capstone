@@ -79,7 +79,7 @@ function SinglePlant(props){
           cursor: pointer;
         }
         .full-plant-detail:hover {
-           transform: scale(1.2);
+           transform: scale(1.1);
            padding: .5rem;
         }
         .plant-list-img {

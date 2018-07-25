@@ -1,8 +1,7 @@
 import constants from './../constants';
-const { initialState, types } = constants;
+const { initialState } = constants;
 
 const plantSelectedReducer = (state = initialState.selectedPlant, action) => {
-  //console.log('this is the selected book reducer', action.selectedPlant);
 
   switch (action.type) {
     case 'SELECT_PLANT':
