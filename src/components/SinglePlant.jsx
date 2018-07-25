@@ -68,7 +68,7 @@ function SinglePlant(props){
   //console.log(id);
 
   return(
-    <div>
+    <div className="full-plant-detail">
       <div>{viewSinglePlant}</div>
       <div
         className="single-plant-flex"
@@ -81,6 +81,12 @@ function SinglePlant(props){
        <h2><img src={plantSVG} className="leaf-icon" alt="Icon of a plant"/>{props.name}</h2>
      </div>
       <style jsx>{`
+        .full-plant-detail {
+          cursor: pointer;
+        }
+        .full-plant-detail:hover {
+          box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
         .plant-list-img {
           display: block;
           overflow: hidden;
