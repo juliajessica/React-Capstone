@@ -25,7 +25,7 @@ function GardenList(props){
         .garden-item {
           margin-top: 0rem;
           margin: auto;
-          height: 565px;
+
         }
         .plant-garden img{
           padding-right: 1rem;
