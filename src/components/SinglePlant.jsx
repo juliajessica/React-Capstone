@@ -5,10 +5,7 @@ import plantSVG from './../assets/imgs/pagelines.svg';
 import SinglePlantDescription from './SinglePlantDescription';
 import Modal from 'react-modal';
 import c from './../constants';
-//import { viewPlantDetails } from './../actions';
 
-
-// Modal.setAppElement(document.getElementById('display-dom'));
 
 function SinglePlant(props){
 
@@ -22,8 +19,6 @@ function SinglePlant(props){
       transform: 'translate(-50%, -50%)'
     }
   };
-  //console.log(plant);
-  //console.log('this is the selected plant' + selectedPlant);
 
   let viewSinglePlant = null;
   // console.log(selectedPlant);
@@ -56,7 +51,6 @@ function SinglePlant(props){
     const action1 = {
       type: "SELECT_PLANT",
       id,
-      // modalIsOpen: true
     };
     dispatch(action1);
     const action2 = {
@@ -114,15 +108,6 @@ SinglePlant.propTypes = {
   plantData: PropTypes.object,
   dispatch: PropTypes.func,
   selectedPlant: PropTypes.string,
-  // image: PropTypes.string,
-  // name: PropTypes.string,
-  // description: PropTypes.string,
-  // maintenance: PropTypes.string,
-  // water: PropTypes.string,
-  // exposure: PropTypes.string,
-  // growthPeriod: PropTypes.string,
-  // bloom: PropTypes.string,
-  // id: PropTypes.string,
   modalIsOpen: PropTypes.bool,
 };
 

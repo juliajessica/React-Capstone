@@ -15,7 +15,6 @@ function CalendarHeader(){
           padding: 0 1.3rem;
           background-color: #F9D7B5;
           height: 90px;
-          width: 100%;
           display: flex;
           align-items: center;
           justify-content: space-between;

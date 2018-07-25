@@ -4,23 +4,9 @@ import PropTypes from 'prop-types';
 import SinglePlant from './SinglePlant';
 import Garden from './Garden';
 
-//import { viewPlantDetails } from './../actions';
-
 function PlantSearchContainer(props) {
   let showNewPlantInGarden = null;
 
-
-
-
-     // if (props.addToGarden === true){
-     //   showNewPlantInGarden =
-     //   <Garden
-     //     name={props.name} />;
-     //
-     // } else {
-     //   showNewPlantInGarden;
-     // }
-     // //console.log(props.plantData.id.addToGarden);
 
   return(
     <div>
@@ -32,7 +18,6 @@ function PlantSearchContainer(props) {
                 <div className="singlePlant">
                   {Object.keys(props.plantData).map(function(plantId){
                     let singlePlant = props.plantData[plantId];
-
 
                     //console.log(props.selectedPlant);
                     //console.log(singlePlant);
@@ -94,14 +79,12 @@ function PlantSearchContainer(props) {
 PlantSearchContainer.propTypes = {
   plantData: PropTypes.object,
   selectedPlant: PropTypes.string,
-
 };
 
 const mapStateToProps = state => {
   return {
     plantData: state.plantData,
     selectedPlant: state.selectedPlant,
-    //plantInGarden: state.plantInGarden
   };
 };
 

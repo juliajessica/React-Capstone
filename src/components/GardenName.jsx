@@ -9,7 +9,7 @@ function GardenName(){
     <div>
       <div className="garden-user-name">
         <p>JULIA'S GARDEN</p>
-        <Link to='/garden-edit' className='add-icon'><img src={add} alt="Add to Garden" /></Link>
+        <Link to='/plant-search' className='add-icon'><img src={add} alt="Add to Garden" /></Link>
       </div>
       <div className="verticle-line"></div>
       <style jsx>{`

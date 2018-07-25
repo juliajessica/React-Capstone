@@ -2,7 +2,6 @@ import constants from './../constants';
 const { initialState, types } = constants;
 
 const moduleOpenReducer = (state = initialState.modalIsOpen, action) => {
-  //console.log('this is the selected book reducer', action.selectedPlant);
 
   switch (action.type) {
     case 'TOGGLE_MODAL':
