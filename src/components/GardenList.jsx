@@ -4,9 +4,53 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import settings from './../assets/imgs/settings.svg';
+import Modal from 'react-modal';
 
 function GardenList(props){
   console.log('gardenList' + props.name);
+
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)'
+    }
+  };
+
+  let editSinglePlant = null;
+
+  if (props.selectedPlant === props.id){
+    editSinglePlant =
+    <Modal
+      style={customStyles}
+      isOpen={props.modalIsOpen}>
+        <Garden
+        name={props.name}
+        image={props.image}
+        description={props.description}
+        maintenance={props.maintenance}
+        water={props.water}
+        exposure={props.exposure}
+        growthPeriod={props.growthPeriod}
+        bloom={props.bloom}
+        id={props.id}
+      />
+      </Modal>;
+  }
+
+
+  function handleEditGardenItem(id){
+    const { dispatch } = props;
+    const action = {
+      type: "TOGGLE_MODAL",
+    };
+    dispatch(action);
+    //console.log(action);
+  }
+  //console.log(id);
 
   return(
     <div>
@@ -16,7 +60,9 @@ function GardenList(props){
             <img src={props.image} alt="image of plant in garden" className="plant-img"/>
           </div>
           <h1>{props.name}</h1>
-          <Link to='/garden-edit'><img src={settings} alt="setting icon to edit garden"/></Link>
+
+            <img src={settings} alt="setting icon to edit garden" onClick = {() => handleEditGardenItem(props.id)}/>
+
         </div>
 
 
