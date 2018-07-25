@@ -13,7 +13,7 @@ function Nav(){
       <div className="navImgs">
         <Link to='/plant-search'><img src={Home} alt="home"/></Link>
         <Link to='/calendar'><img src={Calendar} alt="calendar"/></Link>
-        <Link to='/garden'><img src={Spa} alt="garden"/></Link>
+        <Link to='/personal-garden'><img src={Spa} alt="garden"/></Link>
         <Link to='/profile'><img src={User} alt="profile"/></Link>
       </div>
 

@@ -1,28 +1,33 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import settings from './../assets/imgs/settings.svg';
 import GardenName from './GardenName';
 import GardenList from './GardenList';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 
 function GardenListContainer(props){
-  console.log('this is props passed' + props.name);
+
 
   return(
     <div>
       <div className="plant-garden-loop">
         <h3>Garden</h3>
         <GardenName/>
+
+        <div className="single-garden-item">
           {Object.keys(props.plantData).map(function(plantId){
-              let singleGardenItem = props.plantData[plantId];
-              console.log('this is all the data passed in the container:' + props.plantData);
-            return (
-              <GardenList
-                name={singleGardenItem.name}
-                id={plantId}
-                addedToGarden={singleGardenItem.addedToGarden} />
-            );
+            let singleGardenItem = props.plantData[plantId];
+
+              if (singleGardenItem.addedToGarden === true) {
+                return <GardenList
+                         name={singleGardenItem.name}
+                         image={singleGardenItem.image}
+                         id={plantId}
+                       />;
+              }
+
           })}
+        </div>
        </div>
 
       <style jsx>{`

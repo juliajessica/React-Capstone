@@ -19,26 +19,6 @@ function Garden(props){
 
       </div>
       <style jsx>{`
-        .garden {
-          margin-top: 0rem;
-          margin: auto;
-          height: 565px;
-        }
-        .plant-garden img{
-          padding-right: 1rem;
-        }
-        .add-icon {
-          padding: 1rem;
-        }
-        .plant-garden {
-          margin-top: 2rem;
-          height: 90px;
-          width: 100%;
-          background-color: #EBAFA4;
-          display: flex;
-          align-items: center;
-          justify-content: space-around;
-        }
 
       `}
       </style>
