@@ -17,6 +17,16 @@ const plantDataReducer = (state = initialState.plantData, action) => {
       [action.id]: newState
     });
     return newGardenItemStateSlice;
+
+
+    case 'REMOVE_PLANT_FROM_GARDEN':
+    newState = Object.assign({}, state[action.id],{
+      addedToGarden: false
+    });
+    newGardenItemStateSlice = Object.assign({}, state, {
+      [action.id]: newState
+    });
+    return newGardenItemStateSlice
   default:
     return state;
   }

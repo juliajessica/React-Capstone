@@ -116,7 +116,7 @@ SinglePlantDescription.propTypes = {
   dispatch: PropTypes.func,
   plantData: PropTypes.object,
   selectedPlant: PropTypes.string,
-  modalIsOpen: PropTypes.bool,
+  // modalIsOpen: PropTypes.bool,
 };
 
 

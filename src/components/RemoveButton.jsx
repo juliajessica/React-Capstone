@@ -1,12 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
 
 function RemoveButton(){
 
+  function refreshPage(){
+    window.location.reload();
+  }
+
   return(
     <div>
-      <Link to='/calendar-edit'><button type="button" className="edit-cal">REMOVE</button></Link>
+      <button type="button" onClick={ refreshPage } className="edit-cal">REMOVE</button>
     <style jsx>{`
       .edit-cal {
         font-size: .8rem;
