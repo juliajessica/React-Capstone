@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import plantSVG from './../assets/imgs/pagelines.svg';
 import SinglePlantDescription from './SinglePlantDescription';
 import Modal from 'react-modal';
-import c from './../constants';
+// import c from './../constants';
 
 
 function SinglePlant(props){

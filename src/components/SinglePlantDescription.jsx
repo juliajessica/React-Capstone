@@ -115,6 +115,7 @@ function SinglePlantDescription(props){
 
 SinglePlantDescription.propTypes = {
   dispatch: PropTypes.func,
+  plantData: PropTypes.object,
   selectedPlant: PropTypes.string,
   modalIsOpen: PropTypes.bool,
   addToGarden: PropTypes.bool,

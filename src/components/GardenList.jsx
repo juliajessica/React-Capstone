@@ -1,21 +1,44 @@
 import React from 'react';
+import settings from './../assets/imgs/settings.svg';
+import { Link } from 'react-router-dom';
+import GardenName from './GardenName';
+import Garden from './Garden';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import settings from './../assets/imgs/settings.svg';
-import GardenName from './GardenName';
 
-
-function Garden(props){
+function GardenList(props){
   console.log('this is props passed' + props.name);
+
+  // let newGardenItem = null;
+  //
+  //   console.log(props.addedToGarden);
+  //
+  //   <div className="plant-garden-loop">
+  //     {Object.keys(props.plantData).map(function(plantId){
+  //       let singleGardenItem = props.plantData[plantId];
+  //       if (props.addedToGarden === true) {
+  //
+  //         newGardenItem = <Garden
+  //           name={singleGardenItem.name}
+  //           id={plantId}
+  //           addedToGarden={singleGardenItem.addedToGarden} />;
+  //         }
+  //     })}
+  //   </div>
+  //
+
+
+
   return(
     <div>
       <div className="garden">
+        <h3>Garden</h3>
         <GardenName/>
-          <div className="plant-garden">
-            <h1>{props.name}</h1>
-            <Link to='/garden-edit'><img src={settings} alt="setting icon to edit garden"/></Link>
+
+          <div>
+            {newGardenItem}
           </div>
+
 
       </div>
       <style jsx>{`
@@ -24,13 +47,8 @@ function Garden(props){
           margin: auto;
           height: 565px;
         }
-        .plant-garden img{
-          padding-right: 1rem;
-        }
-        .add-icon {
-          padding: 1rem;
-        }
-        .plant-garden {
+
+        .plant-garden-loop {
           margin-top: 2rem;
           height: 90px;
           width: 100%;
@@ -45,9 +63,9 @@ function Garden(props){
 
     </div>
   );
-}
+};
 
-Garden.propTypes = {
+GardenList.propTypes = {
   plantData: PropTypes.object,
   dispatch: PropTypes.func,
   selectedPlant: PropTypes.string,
@@ -63,4 +81,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(Garden);
+export default connect(mapStateToProps)(GardenList);
