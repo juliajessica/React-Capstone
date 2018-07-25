@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import arrow from '././../assets/imgs/arrow.svg';
 
 function SinglePlantDescription(props){
   let showNewPlantInGarden = null;
@@ -30,7 +31,7 @@ function SinglePlantDescription(props){
   return(
     <div>
       <div className="single-plant-description">
-
+        <img src={arrow} alt="arrow icon" className="arrow-svg" onClick={handleModalClose}/>
         <h1 className="plant-name">{props.name}</h1>
             <div className="plant-desc-img">
               <img src={props.image} alt="image of plant" className="plant-desc-imgResize" />
@@ -44,10 +45,6 @@ function SinglePlantDescription(props){
           <Link to='/garden'><button
             onClick = {() => handleAddToGarden(props.id)} >
             ADD TO GARDEN</button></Link>
-            <button
-              onClick={handleModalClose}>
-              close me
-            </button>
           </div>
 
 
@@ -55,6 +52,10 @@ function SinglePlantDescription(props){
         .flex-plant {
           display: flex;
           justify-content: space-between;
+        }
+
+        .arrow-svg {
+          width: 20px;
         }
 
         .plant-name {

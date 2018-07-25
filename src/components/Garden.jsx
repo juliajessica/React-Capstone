@@ -52,7 +52,7 @@ Garden.propTypes = {
   plantData: PropTypes.object,
   dispatch: PropTypes.func,
   selectedPlant: PropTypes.string,
-  name: PropTypes.string,
+  // name: PropTypes.string,
   plantInGarden: PropTypes.bool,
 };
 

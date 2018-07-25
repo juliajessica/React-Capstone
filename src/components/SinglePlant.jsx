@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import plantSVG from './../assets/imgs/pagelines.svg';
@@ -108,15 +108,15 @@ SinglePlant.propTypes = {
   plantData: PropTypes.object,
   dispatch: PropTypes.func,
   selectedPlant: PropTypes.string,
-  image: PropTypes.string,
-  name: PropTypes.string,
-  description: PropTypes.string,
-  maintenance: PropTypes.string,
-  water: PropTypes.string,
-  exposure: PropTypes.string,
-  growthPeriod: PropTypes.string,
-  bloom: PropTypes.string,
-  id: PropTypes.string,
+  // image: PropTypes.string,
+  // name: PropTypes.string,
+  // description: PropTypes.string,
+  // maintenance: PropTypes.string,
+  // water: PropTypes.string,
+  // exposure: PropTypes.string,
+  // growthPeriod: PropTypes.string,
+  // bloom: PropTypes.string,
+  // id: PropTypes.string,
   modalIsOpen: PropTypes.bool,
 };
 
