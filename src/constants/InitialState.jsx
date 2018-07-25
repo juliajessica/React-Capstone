@@ -64,6 +64,7 @@ export const initialState = {
         water: "1x a week",
         exposure: "Window Sunlight",
         growthPeriod: "Spring, Summer, Fall",
+        bloom: "Spring",
         addedToGarden: false,
         id: 4
     },
