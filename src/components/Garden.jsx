@@ -8,25 +8,25 @@ function Garden(props){
 
   function handleModalClose(){
     const { dispatch } = props;
-    const action1 = {
+    const action = {
       type: 'TOGGLE_MODAL',
       modalIsOpen: false
     };
-    dispatch(action1);
-    console.log(action1);
+    dispatch(action);
+    console.log(action);
   }
 
 
 
   function handlePlantRemove(){
     const { dispatch } = props;
-    const action2 = {
+    const action = {
       type: 'REMOVE_PLANT_FROM_GARDEN',
       id: props.id
     };
     console.log('this is the selected plant' + props.id);
-    dispatch(action2);
-    console.log(action2);
+    dispatch(action);
+    console.log(action);
   }
 
   return(
@@ -36,7 +36,7 @@ function Garden(props){
         <div className="flex-edit-plant">
           <h1>{props.name}</h1>
           <div className="plant-desc-img">
-            <img src={props.image} className="resize-edit-plant"/>
+            <img src={props.image} className="resize-edit-plant" alt="plant image in garden"/>
           </div>
         </div>
           <button type="button" onClick= {() => handlePlantRemove(props.id)} className="edit-button">REMOVE</button>

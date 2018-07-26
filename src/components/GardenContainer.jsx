@@ -18,14 +18,16 @@ function GardenListContainer(props){
             let singleGardenItem = props.plantData[plantId];
 
               if (singleGardenItem.addedToGarden === true) {
-                return <GardenList
-                         name={singleGardenItem.name}
-                         image={singleGardenItem.image}
-                         id={plantId}
-                         key={plantId}
-                       />;
-              }
-
+                return (
+                  <GardenList
+                    name={singleGardenItem.name}
+                    image={singleGardenItem.image}
+                    id={plantId}
+                    key={plantId} />
+                );
+              } else {
+                return false
+              }  
           })}
         </div>
        </div>
@@ -38,8 +40,7 @@ function GardenListContainer(props){
         }
 
       `}
-      </style>
-
+    </style>
     </div>
   );
 };

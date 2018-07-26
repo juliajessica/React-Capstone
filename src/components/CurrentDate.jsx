@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import Calendar from 'react-calendar'
-import CalendarHeader from './CalendarHeader';
+// import Calendar from 'react-calendar'
+// import CalendarHeader from './CalendarHeader';
 import PropTypes from 'prop-types';
 
 function CurrentDate(props) {
