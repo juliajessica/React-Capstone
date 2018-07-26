@@ -4,7 +4,6 @@
   "homepage": "https://juliajessica.github.io/React-Capstone",
   "private": true,
   "dependencies": {
-    "gh-pages": "^1.2.0",
     "prop-types": "^15.5.10",
     "react": "^16.4.1",
     "react-calendar": "^2.16.1",
@@ -36,6 +35,7 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-react": "^7.10.0",
     "file-loader": "^1.1.11",
+    "gh-pages": "^1.2.0",
     "html-webpack-plugin": "^2.29.0",
     "jest": "^20.0.4",
     "react-hot-loader": "^3.0.0-beta.7",

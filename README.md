@@ -8,7 +8,7 @@
 </p>
 
 ## View Live portfolio application:
-https://
+https://juliajessica.github.io/React-Capstone
 
 ## <span style="color:#74875d;">Application Planning</span>
 * <a href="/capstone-project-proposal.md">Independent Capstone Project Proposal</a>
@@ -32,12 +32,13 @@ _This webpage application is designed for users to search for plants they're int
 ## <span style="color:#74875d;">Setup/Installation Requirements</span> :computer:
 
 * Clone repository on your local computer.
+* Install application
+### `npm install`
 * In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
 
 | Features | Status |
 |:----------|:----------|
@@ -45,7 +46,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 | Login: User can sign up for an account | In Progress |  
 | Homepage: User can search for plants to see further details on care instructions | Complete |
 | Footer Component: User can access the footer to view homepage, calendar, add plant to their garden, and their profile page | Complete |
-| Add Component: User can view all plants in their garden box and add or remove them | In Progress |
+| Add Component: User can view all plants in their garden box and add or remove them | Complete |
 | Profile Component: User can view/edit their profile and make any changes to update it | In Progress |
 
 | Future Features | Status |
